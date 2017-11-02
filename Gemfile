@@ -11,6 +11,7 @@ gem 'rails', '~> 5.1.4'
 # Backend
 gem 'pg'
 gem 'puma', '~> 3.7'
+gem 'devise'
 
 # Frontend
 gem 'sass-rails', '~> 5.0'
