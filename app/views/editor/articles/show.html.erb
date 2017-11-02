@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<%= @article.headline %> <br>
+<%= @article.lead %> <br>
+<%= @article.body %> <br>
+
+
+<%= link_to 'Edit', edit_editor_article_path(@article) %> |
+<%= link_to 'Back', editor_articles_path %>
