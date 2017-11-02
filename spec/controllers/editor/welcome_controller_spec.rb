@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Admin::WelcomeController, type: :controller do
+RSpec.describe Editor::WelcomeController, type: :controller do
 
   describe "GET #index" do
     it "returns http success" do

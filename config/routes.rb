@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  namespace :admin do
+  namespace :editor do
     get 'welcome/index'
   end
 
-  root 'admin/welcome#index'
+  root 'editor/welcome#index'
 end
