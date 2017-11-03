@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :editor do
     get 'welcome/index'
     resources :articles
+    resources :sections
   end
 
   root 'editor/welcome#index'
