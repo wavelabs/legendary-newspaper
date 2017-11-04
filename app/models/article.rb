@@ -1,3 +1,9 @@
 class Article < ApplicationRecord
-  validates :headline, :lead, :body, presence: true
+  belongs_to :section, foreign_key: :section_id
+
+  validates :headline, :lead, :body, :section_id, presence: true
+
+  def section_name
+    self.section.name
+  end
 end

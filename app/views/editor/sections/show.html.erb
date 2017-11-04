@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<%= @section.name %> <br>
+<p>
+  <strong>Nombre:</strong><br>
+  <%= @section.name %>
+</p>
 
 <%= link_to 'Editar', edit_editor_section_path(@section) %> |
 <%= link_to 'Volver', editor_sections_path %>

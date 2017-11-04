@@ -1,4 +1,5 @@
 class Section < ApplicationRecord
-  validates :name, presence: true
+  has_many :articles, inverse_of: :section, dependent: :destroy
 
+  validates :name, presence: true
 end

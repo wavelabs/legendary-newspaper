@@ -1,9 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<%= @article.headline %> <br>
-<%= @article.lead %> <br>
-<%= @article.body %> <br>
+<p>
+  <strong>Sección:</strong><br>
+  <%= @article.section_name %>
+</p>
 
+<p>
+  <strong>Título:</strong><br>
+  <%= @article.headline %>
+</p>
+
+<p>
+  <strong>Copete:</strong><br>
+  <%= @article.lead %>
+</p>
+
+<p>
+  <strong>Cuerpo:</strong><br>
+  <%= @article.body %>
+</p>
 
 <%= link_to 'Editar', edit_editor_article_path(@article) %> |
 <%= link_to 'Volver', editor_articles_path %>
