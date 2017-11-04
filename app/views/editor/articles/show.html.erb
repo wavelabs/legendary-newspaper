@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Autor:</strong><br>
+  <%= @article.author ? @article.author_name : 'Anónimo' %>
+</p>
+
+<p>
   <strong>Título:</strong><br>
   <%= @article.headline %>
 </p>

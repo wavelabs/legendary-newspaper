@@ -69,6 +69,6 @@ class Editor::ArticlesController < Editor::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit( :headline, :lead, :body, :section_id )
+      params.require(:article).permit( :headline, :lead, :body, :section_id, :author_id )
     end
 end

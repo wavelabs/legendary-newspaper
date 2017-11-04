@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     get 'welcome/index'
     resources :articles
     resources :sections
+    resources :authors
   end
 
   root 'editor/welcome#index'
