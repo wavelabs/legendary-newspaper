@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.4'
 gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'devise'
+gem 'filestack-rails'
 
 # Frontend
 gem 'sass-rails', '~> 5.0'

@@ -15,6 +15,7 @@ class Editor::ArticlesController < Editor::BaseController
   # GET /articles/new
   def new
     @article = Article.new
+    @article.image = Image.new
   end
 
   # GET /articles/1/edit
@@ -69,6 +70,9 @@ class Editor::ArticlesController < Editor::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit( :headline, :lead, :body, :section_id, :author_id )
+      params.require(:article).permit(
+                                :headline, :lead, :body, :section_id, :author_id,
+                                image_attributes: [ :filename, :filepicker_url, :_destroy, :id ]
+                                )
     end
 end

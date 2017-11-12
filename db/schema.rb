@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171104004137) do
+ActiveRecord::Schema.define(version: 20171112001404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,15 @@ ActiveRecord::Schema.define(version: 20171104004137) do
     t.index ["reset_password_token"], name: "index_editors_on_reset_password_token", unique: true
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string "filename"
+    t.string "filepicker_url"
+    t.bigint "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_images_on_article_id"
+  end
+
   create_table "sections", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -60,4 +69,5 @@ ActiveRecord::Schema.define(version: 20171104004137) do
 
   add_foreign_key "articles", "authors"
   add_foreign_key "articles", "sections"
+  add_foreign_key "images", "articles"
 end
