@@ -8,11 +8,6 @@ class Article < ApplicationRecord
 
   validates :headline, :lead, :body, :section_id, presence: true
 
-  def section_name
-    self.section.name
-  end
-
-  def author_name
-    self.author.full_name
-  end
+  delegate :name, to: :section, prefix: true
+  delegate :full_name, to: :author, prefix: true
 end
