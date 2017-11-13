@@ -19,7 +19,7 @@
         <td><%= article.headline %></td>
         <td><%= article.lead %></td>
         <td><%= article.section_name %></td>
-        <td><%= article.author ? article.author_name : 'Anónimo'  %></td>
+        <td><%= article.author ? article.author_full_name : 'Anónimo'  %></td>
         <td><%= link_to 'Ver', editor_article_path(article) %></td>
         <td><%= link_to 'Editar', edit_editor_article_path(article) %></td>
         <td><%= link_to 'Eliminar', editor_article_path(article), method: :delete, data: { confirm: 'Está Seguro?' } %></td>
