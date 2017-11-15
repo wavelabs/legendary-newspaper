@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     resources :sections
     resources :authors
   end
-
-  root 'editor/welcome#index'
+  resources :articles
+  root 'articles#index'
 end

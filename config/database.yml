@@ -7,18 +7,18 @@ development:
   <<: *default
   host: localhost
   database: legendary_newspaper_development
-  username: <%= ENV['PG_USERNAME'] %>
-  password: <%= ENV['PG_PASSWORD'] %>
+  username: postgres
+  password: root
 
 test:
   <<: *default
   host: localhost
   database: legendary_newspaper_test
-  username: <%= ENV['PG_USERNAME'] %>
-  password: <%= ENV['PG_PASSWORD'] %>
+  username: postgres
+  password: root
 
 production:
   <<: *default
   database: legendary_newspaper_production
-  username: <%= ENV['PG_USERNAME'] %>
-  password: <%= ENV['PG_PASSWORD'] %>
+  username: postgres
+  password: root
