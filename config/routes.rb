@@ -24,6 +24,6 @@ Rails.application.routes.draw do
     resources :editors
   end
 
-  resources :articles
+  resources :articles, only: [ :index, :show ]
   root 'articles#index'
 end
