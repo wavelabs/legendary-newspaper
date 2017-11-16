@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     resources :sections
     resources :authors
   end
-  resources :articles
+  resources :articles, only: [ :index, :show ]
   root 'articles#index'
 end
