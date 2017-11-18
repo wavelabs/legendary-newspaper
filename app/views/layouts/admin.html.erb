@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Base CMS</title>
+    <title>Diario</title>
     <%= csrf_meta_tags %>
 
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
@@ -13,10 +13,10 @@
 
   <body>
     <div id="cl-wrapper">
-      <%= render 'shared/editor/sidebar' %>
+      <%= render 'shared/admin/sidebar' %>
 
       <div id="pcont" class="container-fluid">
-        <%= render 'shared/editor/navbar' %>
+        <%= render 'shared/admin/navbar' %>
 
         <div class="cl-mcont">
           <%= yield %>
