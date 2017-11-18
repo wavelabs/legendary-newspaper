@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171118074928) do
+ActiveRecord::Schema.define(version: 20171118103535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20171118074928) do
     t.datetime "updated_at", null: false
     t.bigint "section_id"
     t.bigint "author_id"
-    t.datetime "published_at"
+    t.boolean "published", default: false
     t.index ["author_id"], name: "index_articles_on_author_id"
     t.index ["section_id"], name: "index_articles_on_section_id"
   end

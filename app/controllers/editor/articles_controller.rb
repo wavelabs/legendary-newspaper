@@ -4,12 +4,13 @@ class Editor::ArticlesController < Editor::BaseController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @decorated_articles = Article.all.collect { |article| Editor::ArticlePresenter.new(article, view_context) }
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @decorated_article = Editor::ArticlePresenter.new(@article, view_context)
   end
 
   # GET /articles/new

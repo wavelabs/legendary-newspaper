@@ -4,11 +4,9 @@ class Article < ApplicationRecord
 
   validates :headline, :lead, :body, :section_id, presence: true
 
-  def section_name
-    self.section.name
-  end
+  delegate :full_name, to: :author, prefix: true
+  delegate :name, to: :section, prefix: true
 
-  def author_name
-    self.author.full_name
-  end
+  scope :approved, -> { where(published: true) }
+  scope :unapproved, -> { where(published: false) }
 end
