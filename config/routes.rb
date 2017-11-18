@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-    devise_for :admin
-    devise_for :editor
+  devise_for :admin
+  devise_for :editor
+
   namespace :editor do
-    root 'editor/welcome#index'
+    root 'welcome#index'
     get 'welcome/index'
     resources :articles
     resources :sections
@@ -10,9 +11,9 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    root 'welcome#index'
     get 'welcome/index'
     resources :articles
   end
 
-    root 'admin/welcome#index'
 end
