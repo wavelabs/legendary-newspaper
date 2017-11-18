@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :admin
-  devise_for :editor
+  devise_for :admin, :editor
+
+  devise_scope :admin do
+    get 'admin_login', to: 'devise/sessions#new'
+  end
+
+  devise_scope :editor do
+    get 'editor_login', to: 'devise/sessions#new'
+  end
 
   namespace :editor do
     root 'welcome#index'
@@ -14,6 +21,7 @@ Rails.application.routes.draw do
     root 'welcome#index'
     get 'welcome/index'
     resources :articles
+    resources :editors
   end
 
 end

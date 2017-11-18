@@ -27,11 +27,25 @@
               <span>Articulos</span>
             </a>
             <ul class="sub-menu">
-              <li class="active">
+              <li class="">
                 <%= link_to "Lista de Articulos", admin_articles_path %>
               </li>
               <li>
                 <%= link_to "Nuevo Articulo", new_admin_article_path %>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Editores</span>
+            </a>
+            <ul class="sub-menu">
+              <li class="">
+                <%= link_to "Lista de Editores", admin_editors_path %>
+              </li>
+              <li>
+                <%= link_to "Nuevo Editor", new_admin_editor_path %>
               </li>
             </ul>
           </li>
