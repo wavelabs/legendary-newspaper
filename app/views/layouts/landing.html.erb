@@ -23,22 +23,48 @@
     </script>
   </head>
   <body>
-<%= render 'shared/landing/header' %>
-<%= yield %>
-<%= render 'shared/landing/footer' %>
+    <%= render 'shared/landing/header' %>
 
-      <!--/start-copyright-section-->
+    <%= yield %>
+
+    <div class="content">
+      <div class="banner-content"></div>
+    </div>
+
+    <div class="content">
+      <div class="row">
         <div class="copyright">
-              <p>&copy; 2017 Company <a href="http://wavelabs-studio.com/">Wavelabs</a> </p>
+          <div class="col-lg-4 col-xs-4">
+            <div class="social-media">
+              <%= link_to image_tag('facebook.png'), 'https://www.facebook.com/', class: "card-img-top img"%>
+            </div>
+
+            <div class="social-media">
+              <%= link_to image_tag('instagram-gris.png'), 'https://www.instagram.com/', class: "card-img-top img"%>
+            </div>
+
+            <div class="social-media">
+              <%= link_to image_tag('twitter.png'), 'https://twitter.com/', class: "card-img-top img"%>
+            </div>
           </div>
+          <div class="col-lg-4 col-xs-4">
+            <p class="company-box">&copy; 2017 Company <a href="http://wavelabs-studio.com/">Wavelabs</a> </p>
+          </div>
+          <div class="col-lg-4 col-xs-4">
+            <div class="contact-box">
+              <%= image_tag 'whatsappbn.png', class: "contact-box-img" %>
+              <span class="phone">3815123456</span>
+            </div>
+          </div>
+        </div>
 
-
-        <!--start-smoth-scrolling-->
-            <script type="text/javascript">
-                  $(document).ready(function() {
-                    $().UItoTop({ easingType: 'easeOutQuart' });
-                  });
-                </script>
-    <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $().UItoTop({ easingType: 'easeOutQuart' });
+          });
+        </script>
+        <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+      </div>
+    </div>
   </body>
 </html>
