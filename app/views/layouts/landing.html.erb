@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BaseCms</title>
+    <title>Diario</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <title>Diario Online</title>
+    <title>Diario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Motive Mag Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!--/script-->
     <script type="text/javascript">
@@ -24,47 +22,10 @@
   </head>
   <body>
     <%= render 'shared/landing/header' %>
-
     <%= yield %>
-
     <div class="content">
       <div class="banner-content"></div>
     </div>
-
-    <div class="content">
-      <div class="row">
-        <div class="copyright">
-          <div class="col-lg-4 col-xs-4">
-            <div class="social-media">
-              <%= link_to image_tag('facebook.png'), 'https://www.facebook.com/', class: "card-img-top img"%>
-            </div>
-
-            <div class="social-media">
-              <%= link_to image_tag('instagram-gris.png'), 'https://www.instagram.com/', class: "card-img-top img"%>
-            </div>
-
-            <div class="social-media">
-              <%= link_to image_tag('twitter.png'), 'https://twitter.com/', class: "card-img-top img"%>
-            </div>
-          </div>
-          <div class="col-lg-4 col-xs-4">
-            <p class="company-box">&copy; 2017 Company <a href="http://wavelabs-studio.com/">Wavelabs</a> </p>
-          </div>
-          <div class="col-lg-4 col-xs-4">
-            <div class="contact-box">
-              <%= image_tag 'whatsappbn.png', class: "contact-box-img" %>
-              <span class="phone">3815123456</span>
-            </div>
-          </div>
-        </div>
-
-        <script type="text/javascript">
-          $(document).ready(function() {
-            $().UItoTop({ easingType: 'easeOutQuart' });
-          });
-        </script>
-        <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-      </div>
-    </div>
+    <%= render 'shared/landing/footer' %>
   </body>
 </html>
