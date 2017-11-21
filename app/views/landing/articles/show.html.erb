@@ -6,10 +6,10 @@
       <div class="col-md-12 mag-innert-left">
         <div class="banner-bottom-left-grids">
           <div class="single-left-grid">
+            <h1><%=@decorated_article.headline%></h1>
             <center><%= image_tag 'single.jpg', class: "img-responsive"%></center>
             <br>
-            <h1><%=@decorated_article.headline%></h1>
-            <h4><%=@decorated_article.lead%></h4>
+            <h4><small><%=@decorated_article.lead%></small></h4>
             <p class="article"><%=@decorated_article.body%></p>
             </div>
           </div>
