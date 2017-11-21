@@ -20,7 +20,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
-gem 'bootstrap', '~> 4.0.0.beta2.1'
 
 # Configuration/Setup
 gem 'figaro'
