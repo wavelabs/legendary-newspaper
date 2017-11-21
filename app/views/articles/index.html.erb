@@ -1,34 +1,21 @@
-<%= render 'shared/landing/banner' %>
- <!--/start-main-->
-   <div class="main-content">
-     <div class="container">
-      <div class="mag-inner">
-        <div class="clearfix"></div>
-      </div>
-      <!--//start-bottom-->
-      <div class="mag-bottom">
-        <h3 class="tittle bottom"><i class="glyphicon glyphicon-globe"></i>NOVEDADES</h3>
-        <div class="grid">
-          <% @articles.each do |a| %>
-            <div class="col-md-4 m-b">
-              <figure class="effect-layla">
-                <%= link_to image_tag('pic.jpg'), article_path(a)%>
-                <figcaption>
-                  <%= link_to 'Ver mas', article_path(a) %>
-                </figcaption>
-              </figure>
-              <div class="m-b-text">
+<center>
+  <h3 class="tittle">Novedades</h3>
+</center>
+<div class="container">
+<center>
+    <div class="row">
+      <% @articles.each do |a|%>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="card">
+            <%= link_to image_tag('pic.jpg'), article_path(a), class: "card-img-top img"%>
+            <div class="card-body">
                 <%= link_to a.headline, article_path(a), class: 'wd'  %>
-                <p><%= a.lead %></p>
                 <%= link_to 'LEER MAS', article_path(a), class: 'read' %>
-              </div>
             </div>
-          <% end %>
+          </div>
         </div>
-         <div class="clearfix"></div>
-        </div>
-      </div>
-      <!--//mag-bottom-->
-      </div>
+      <% end %>
     </div>
- <!--//end-main-->
+  </center>
+</div>
+
