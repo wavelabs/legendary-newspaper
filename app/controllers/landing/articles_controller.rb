@@ -1,11 +1,12 @@
-class ArticlesController < ApplicationController
+class Landing::ArticlesController < Landing::BaseController
   before_action :set_article, only: [:show]
-layout 'landing'
+
   def index
-    @articles = Article.all
+    @decorated_articles = Article.approved.collect { |article| Landing::ArticlePresenter.new(article, view_context) }
   end
 
   def show
+    @decorated_article = Landing::ArticlePresenter.new(@article, view_context)
   end
 
   private

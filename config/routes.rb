@@ -24,6 +24,8 @@ Rails.application.routes.draw do
     resources :editors
   end
 
-  resources :articles, only: [ :index, :show ]
-  root 'articles#index'
+  scope module: 'landing' do
+    resources :articles, only: [ :index, :show ]
+    root 'articles#index'
+  end
 end
