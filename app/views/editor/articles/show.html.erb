@@ -25,5 +25,10 @@
   <%= @decorated_article.body %>
 </p>
 
+<p>
+  <strong>Aprobado?</strong><br>
+  <%= @decorated_article.is_published? %>
+</p>
+
 <%= link_to 'Editar', edit_editor_article_path(@article) %> |
 <%= link_to 'Volver', editor_articles_path %>
