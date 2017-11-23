@@ -1,22 +1,15 @@
 <center>
-  <h3 class="tittle">Novedades</h3>
-</center>
-
-<div class="container">
-<center>
-    <div class="row">
-      <% @decorated_articles.each do |a|%>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="card">
-            <%= link_to image_tag('pic.jpg'), article_path(a), class: "card-img-top img"%>
-            <div class="card-body">
-                <%= link_to a.headline, article_path(a), class: 'wd'  %>
-                <%= link_to 'LEER MAS', article_path(a), class: 'read' %>
-            </div>
+  <div class="row">
+    <% @decorated_articles.each do |a|%>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+        <div class="card">
+          <%= link_to image_tag('pic.jpg'), article_path(a), class: "card-img-top img"%>
+          <div class="card-body">
+              <%= link_to a.headline, article_path(a), class: 'wd'  %>
           </div>
         </div>
-      <% end %>
-    </div>
-  </center>
-</div>
+      </div>
+    <% end %>
+  </div>
+</center>
 

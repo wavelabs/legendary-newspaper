@@ -1,6 +1,7 @@
 //= require jquery
 //= require rails-ujs
 //= require module/jquery.min
+//= require module/overwrite
 //= require module/move-top
 //= require module/easing
 //= require module/responsiveslides.min
