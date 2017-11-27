@@ -11,17 +11,9 @@
   </head>
   <body>
     <%= render 'shared/landing/header' %>
-    <div class="content">
-      <div class="banner-content">
-        <%= image_tag 'default-xl-banner.png', class: "img-responsive"%>
-      </div>
-    </div>
-    <hr></hr>
     <div class="content-main">
       <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-          <%= yield %>
-        </div>
+        <%= yield %>
         <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs">
           <div class="banner-right">
             <%= image_tag 'default.jpg', class: "img-responsive"%>
@@ -33,11 +25,6 @@
       </div>
     </div>
 
-    <div class="content">
-      <div class="banner-content">
-        <%= image_tag 'default-xl-banner.png', class: "img-responsive"%>
-      </div>
-    </div>
     <%= render 'shared/landing/footer' %>
   </body>
 </html>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Banners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Posicion</strong></th>
+      <th><strong>Imagen</strong></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @banners.each do |b| %>
+      <tr>
+        <td><%= b.position %></td>
+        <td><%= image_tag(b.picture, class: "img-admin-show") %></td>
+        <td><%= link_to 'Eliminar', admin_banner_path(b), method: :delete, data: { confirm: 'Está Seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Banner', new_admin_banner_path %>

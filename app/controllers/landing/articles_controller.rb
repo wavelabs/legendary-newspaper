@@ -3,6 +3,7 @@ class Landing::ArticlesController < Landing::BaseController
 
   def index
     @decorated_articles = Article.approved.collect { |article| Landing::ArticlePresenter.new(article, view_context) }
+    @top_banner = Banner.banner_top
   end
 
   def show

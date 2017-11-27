@@ -8,7 +8,14 @@
         <%= link_to admin_root_path do %>
           <div class="sidebar-logo">
             <div class="logo text-center">
-            <%= image_tag 'logo.png' %>
+              <div class="row">
+                <div class="col-lg-12 hidden-sm hidden-xs">
+                  <%= image_tag 'logo-light.png', class: "logo-cms" %>
+                </div>
+                <div class="hidden-lg hidden-md visible-xs-12">
+                  <%= image_tag 'logo.png', class: "logo-mini"%>
+                </div>
+              </div>
             </div>
           </div>
         <% end %>
@@ -16,7 +23,7 @@
           <div class="info">
             <p>
               <i class="fa fa-user"></i>
-              Basic CMS
+              Panel de control
             </p>
           </div>
         </div>
@@ -46,6 +53,20 @@
               </li>
               <li>
                 <%= link_to "Nuevo Editor", new_admin_editor_path %>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Banner</span>
+            </a>
+            <ul class="sub-menu">
+              <li class="">
+                <%= link_to "Lista de Banners", admin_banners_path %>
+              </li>
+              <li>
+                <%= link_to "Nuevo Banner", new_admin_banner_path %>
               </li>
             </ul>
           </li>

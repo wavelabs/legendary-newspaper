@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Posicion:</strong>
+  <%= @banner.position %>
+</p>
+<p>
+  <strong>Banner:</strong>
+  <div>
+    <%= image_tag(@banner.picture, class: "img-admin-show") %>
+  </div>
+</p>
+
+<%= link_to 'Edit', edit_admin_banner_path(@banner) %> |
+<%= link_to 'Back', admin_banners_path %>

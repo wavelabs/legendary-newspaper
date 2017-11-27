@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     get 'welcome/index'
     resources :articles
     resources :editors
+    resources :banners
   end
 
   scope module: 'landing' do

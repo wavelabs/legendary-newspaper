@@ -1,0 +1,11 @@
+es:
+  activerecord:
+    attributes:
+      banner:
+        position:
+          one: "Posicion"
+          other: "Posiciones"
+        positions:
+          top: "Banner superior"
+          right_first: "Superior derecha"
+          right_second: "Inferior derecha"

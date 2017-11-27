@@ -12,6 +12,11 @@ gem 'rails', '~> 5.1.4'
 gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'devise'
+gem "paperclip", "~> 5.0.0"
+gem 'paperclip-i18n'
+
+# Amazon web services
+gem 'aws-sdk', '~> 2'
 
 # Frontend
 gem 'sass-rails', '~> 5.0'
