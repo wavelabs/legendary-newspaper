@@ -1,6 +1,6 @@
 class Admin::ArticlePresenter < Admin::BasePresenter
   def body
-    @record.body
+    @record.body.html_safe
   end
 
   def lead

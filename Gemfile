@@ -25,6 +25,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
+gem 'tinymce-rails'
+gem 'tinymce-rails-langs'
 
 # Configuration/Setup
 gem 'figaro'

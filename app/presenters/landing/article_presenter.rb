@@ -1,6 +1,6 @@
 class Landing::ArticlePresenter < Landing::BasePresenter
   def body
-    @record.body
+    @record.body.html_safe
   end
 
   def lead
