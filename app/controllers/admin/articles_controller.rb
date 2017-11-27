@@ -1,12 +1,8 @@
 class Admin::ArticlesController < Admin::BaseController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: [ :edit, :update, :destroy]
 
   def index
     @decorated_articles = Article.all.collect { |article| Admin::ArticlePresenter.new(article, view_context) }
-  end
-
-  def show
-    @decorated_article = Admin::ArticlePresenter.new(@article, view_context)
   end
 
   def new
@@ -14,6 +10,7 @@ class Admin::ArticlesController < Admin::BaseController
   end
 
   def edit
+    @decorated_article = Admin::ArticlePresenter.new(@article, view_context)
   end
 
   def create

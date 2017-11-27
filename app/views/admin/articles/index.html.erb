@@ -18,8 +18,7 @@
         <td><%= article.headline %></td>
         <td><%= article.is_published? %></td>
         <td><%= article.section_name %></td>
-        <td><%= link_to 'Ver', admin_article_path(article) %></td>
-        <td><%= link_to 'Editar', edit_admin_article_path(article) %></td>
+        <td><%= link_to 'Ver', edit_admin_article_path(article) %></td>
         <td><%= link_to 'Eliminar', admin_article_path(article), method: :delete, data: { confirm: 'Está Seguro?' } %></td>
       </tr>
     <% end %>

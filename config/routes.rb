@@ -10,17 +10,15 @@ Rails.application.routes.draw do
   end
 
   namespace :editor do
-    root 'welcome#index'
-    get 'welcome/index'
+    root 'articles#index'
     resources :articles
     resources :sections
     resources :authors
   end
 
   namespace :admin do
-    root 'welcome#index'
-    get 'welcome/index'
-    resources :articles
+    root 'articles#index'
+    resources :articles, except: [ :show ]
     resources :editors
     resources :banners
   end
