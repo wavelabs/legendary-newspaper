@@ -1,5 +1,8 @@
 class Article < ApplicationRecord
   default_scope { order("created_at DESC") }
+  has_many :images, dependent: :destroy
+
+  accepts_nested_attributes_for :images, allow_destroy: true
 
   belongs_to :section, foreign_key: :section_id
   belongs_to :author, foreign_key: :author_id, optional: true
