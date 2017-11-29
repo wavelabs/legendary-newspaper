@@ -1,5 +1,7 @@
 <div class="content">
   <div class="banner-content">
-    <%= image_tag @top_banner.picture, class: "img-responsive"%>
+    <% if @top_banner != nil%>
+      <%= image_tag @top_banner.image.picture, class: "img-responsive"%>
+    <% end %>
   </div>
 </div>

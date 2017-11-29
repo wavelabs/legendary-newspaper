@@ -18,10 +18,12 @@
 
   </div>
 
-  <div class="form-group">
-    <%= form.label :Imagen %>
-    <%= form.file_field  :picture, id: "files"%>
-  </div>
+  <%= form.fields_for :image do |img_form| %>
+    <div class="form-group">
+      <%= img_form.label :picture, 'Imagen' %>
+      <%= img_form.file_field  :picture, id: "files"%>
+    </div>
+  <% end %>
 
   <div class="actions">
     <%= form.submit 'Guardar'%>
