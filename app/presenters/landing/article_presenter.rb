@@ -8,7 +8,7 @@ class Landing::ArticlePresenter < Landing::BasePresenter
   end
 
   def headline
-    @record.headline    
+    @record.headline
   end
 
   def section_name
@@ -18,4 +18,5 @@ class Landing::ArticlePresenter < Landing::BasePresenter
   def author_name
     @record.author ? @record.author_full_name : 'Anónimo'
   end
+
 end

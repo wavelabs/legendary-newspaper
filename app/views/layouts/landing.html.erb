@@ -14,17 +14,8 @@
     <div class="content-main">
       <div class="row">
         <%= yield %>
-        <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs">
-          <div class="banner-right">
-            <%= image_tag 'default.jpg', class: "img-responsive"%>
-          </div>
-          <div class="banner-right">
-            <%= image_tag 'default.jpg', class: "img-responsive"%>
-          </div>
-        </div>
       </div>
     </div>
-
     <%= render 'shared/landing/footer' %>
   </body>
 </html>

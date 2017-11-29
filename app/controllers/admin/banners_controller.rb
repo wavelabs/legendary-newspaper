@@ -1,41 +1,23 @@
 class Admin::BannersController < Admin::BaseController
-  before_action :set_banner, only: [:show, :edit, :update, :destroy]
+  before_action :set_banner, only: [:show, :destroy]
 
   def index
     @banners = Banner.all
   end
-
-  def show
-  end
-
   def new
     @banner = Banner.new
-  end
-
-  def edit
+    @banner.build_image unless @banner.image
   end
 
   def create
     @banner = Banner.new(banner_params)
-
+    Banner.delete_by_position(banner_params[:position])
     respond_to do |format|
       if @banner.save
         format.html { redirect_to admin_banner_path(@banner), notice: 'Banner was successfully created.' }
         format.json { render :show, status: :created, location: @banner }
       else
         format.html { render :new }
-        format.json { render json: @banner.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def update
-    respond_to do |format|
-      if @banner.update(banner_params)
-        format.html { redirect_to admin_banner_path(@banner), notice: 'Banner was successfully updated.' }
-        format.json { render :show, status: :ok, location: @banner }
-      else
-        format.html { render :edit }
         format.json { render json: @banner.errors, status: :unprocessable_entity }
       end
     end
@@ -55,6 +37,6 @@ class Admin::BannersController < Admin::BaseController
     end
 
     def banner_params
-      params.require(:banner).permit( :picture, :position)
+      params.require(:banner).permit(:position, image_attributes: [:id, :picture, :_destroy])
     end
 end

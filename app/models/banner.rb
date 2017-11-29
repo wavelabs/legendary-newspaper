@@ -1,11 +1,20 @@
 class Banner < ApplicationRecord
   include EnumI18nHelper
+  has_one :image, dependent: :destroy
+
+  accepts_nested_attributes_for :image, allow_destroy: true
 
   enum position: { top: 1, right_first: 2, right_second: 3 }
 
-  has_attached_file :picture, styles: { small: "64x64", med: "100x100", large: "200x200" }
-  validates_attachment_content_type :picture, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  scope :by_position, -> (position) { where(position: position) }
 
   scope :banners_upload_top, -> { where(position: "top") }
-  scope :banner_top, -> { banners_upload_top.last}
+
+  scope :banners_upload_right_first, -> { where(position: "right_first") }
+
+  scope :banners_upload_right_second, -> { where(position: "right_second") }
+
+  def self.delete_by_position(position)
+    by_position(position).destroy_all
+  end
 end

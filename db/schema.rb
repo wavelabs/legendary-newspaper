@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171123213139) do
+ActiveRecord::Schema.define(version: 20171127143404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,10 +57,6 @@ ActiveRecord::Schema.define(version: 20171123213139) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "picture_file_name"
-    t.string "picture_content_type"
-    t.integer "picture_file_size"
-    t.datetime "picture_updated_at"
   end
 
   create_table "editors", force: :cascade do |t|
@@ -80,6 +76,17 @@ ActiveRecord::Schema.define(version: 20171123213139) do
     t.index ["reset_password_token"], name: "index_editors_on_reset_password_token", unique: true
   end
 
+  create_table "images", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "picture_file_name"
+    t.string "picture_content_type"
+    t.integer "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.bigint "banner_id"
+    t.index ["banner_id"], name: "index_images_on_banner_id"
+  end
+
   create_table "sections", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -88,4 +95,5 @@ ActiveRecord::Schema.define(version: 20171123213139) do
 
   add_foreign_key "articles", "authors"
   add_foreign_key "articles", "sections"
+  add_foreign_key "images", "banners"
 end

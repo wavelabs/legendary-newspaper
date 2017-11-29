@@ -1,0 +1,12 @@
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs">
+  <div class="banner-right">
+    <% if @banner_right_first != nil %>
+      <%= image_tag @banner_right_first.image.picture, class: "img-responsive"%>
+    <% end %>
+  </div>
+  <div class="banner-right">
+    <% if @banner_right_second != nil %>
+      <%= image_tag @banner_right_second.image.picture, class: "img-responsive"%>
+    <% end %>
+  </div>
+</div>
