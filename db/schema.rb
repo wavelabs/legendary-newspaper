@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171127143404) do
+ActiveRecord::Schema.define(version: 20171129210039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,8 @@ ActiveRecord::Schema.define(version: 20171127143404) do
     t.integer "picture_file_size"
     t.datetime "picture_updated_at"
     t.bigint "banner_id"
+    t.bigint "article_id"
+    t.index ["article_id"], name: "index_images_on_article_id"
     t.index ["banner_id"], name: "index_images_on_banner_id"
   end
 
@@ -95,5 +97,6 @@ ActiveRecord::Schema.define(version: 20171127143404) do
 
   add_foreign_key "articles", "authors"
   add_foreign_key "articles", "sections"
+  add_foreign_key "images", "articles"
   add_foreign_key "images", "banners"
 end

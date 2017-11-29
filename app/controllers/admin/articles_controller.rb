@@ -7,6 +7,7 @@ class Admin::ArticlesController < Admin::BaseController
 
   def new
     @article = Article.new
+    @article.images.build unless @article.images
   end
 
   def edit
@@ -53,6 +54,6 @@ class Admin::ArticlesController < Admin::BaseController
     end
 
     def article_params
-      params.require(:article).permit( :headline, :lead, :body, :section_id, :author_id, :published )
+      params.require(:article).permit( :headline, :lead, :body, :section_id, :author_id, :published , images_attributes: [:id, :picture, :_destroy])
     end
 end
