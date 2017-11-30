@@ -2,7 +2,7 @@ class Article < ApplicationRecord
   belongs_to :section, foreign_key: :section_id
   belongs_to :author, foreign_key: :author_id, optional: true
 
-  has_many :images, dependent: :destroy
+  has_many :images, dependent: :destroy, as: :pictureable
 
   accepts_nested_attributes_for :images, reject_if: :all_blank, allow_destroy: true
 

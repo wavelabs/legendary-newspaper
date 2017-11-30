@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171129210039) do
+ActiveRecord::Schema.define(version: 20171130151800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,10 +83,9 @@ ActiveRecord::Schema.define(version: 20171129210039) do
     t.string "picture_content_type"
     t.integer "picture_file_size"
     t.datetime "picture_updated_at"
-    t.bigint "banner_id"
-    t.bigint "article_id"
-    t.index ["article_id"], name: "index_images_on_article_id"
-    t.index ["banner_id"], name: "index_images_on_banner_id"
+    t.string "pictureable_type"
+    t.bigint "pictureable_id"
+    t.index ["pictureable_type", "pictureable_id"], name: "index_images_on_pictureable_type_and_pictureable_id"
   end
 
   create_table "sections", force: :cascade do |t|
@@ -97,6 +96,4 @@ ActiveRecord::Schema.define(version: 20171129210039) do
 
   add_foreign_key "articles", "authors"
   add_foreign_key "articles", "sections"
-  add_foreign_key "images", "articles"
-  add_foreign_key "images", "banners"
 end
