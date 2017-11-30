@@ -3,9 +3,9 @@ class Landing::ArticlesController < Landing::BaseController
 
   def index
     @decorated_articles = Article.approved.collect { |article| Landing::ArticlePresenter.new(article, view_context) }
-    @top_banner = Banner.banners_upload_top[0]
-    @banner_right_first = Banner.banners_upload_right_first[0]
-    @banner_right_second = Banner.banners_upload_right_second[0]
+    @top_banner = Banner.by_position("top").last
+    @banner_right_first = Banner.by_position("right_first").last
+    @banner_right_second = Banner.by_position("right_second").last
   end
 
   def show
