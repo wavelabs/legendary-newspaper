@@ -5,11 +5,6 @@ class Admin::ArticlesController < Admin::BaseController
     @decorated_articles = Article.all.collect { |article| Admin::ArticlePresenter.new(article, view_context) }
   end
 
-  def new
-    @article = Article.new
-    @article.images.build unless @article.images
-  end
-
   def edit
     @decorated_article = Admin::ArticlePresenter.new(@article, view_context)
   end
@@ -54,6 +49,6 @@ class Admin::ArticlesController < Admin::BaseController
     end
 
     def article_params
-      params.require(:article).permit( :headline, :lead, :body, :section_id, :author_id, :published , images_attributes: [:id, :picture, :_destroy])
+      params.require(:article).permit( :headline, :lead, :body, :section_id, :author_id, :published )
     end
 end

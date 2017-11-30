@@ -22,10 +22,9 @@
   </div>
 
   <div class="control-group">
-    <%= form.label :images,'imagenes', :class => 'control-label' %>
-    <div class="controls">
-      <%= file_field_tag "images[]", type: :file, multiple: true %>
-    </div>
+    <%= form.fields_for :images do |g| %>
+      <%= render 'image_fields', f: g %>
+    <% end %>
   </div>
 
   <div class="form-group">
