@@ -15,13 +15,12 @@
   <div class="form-group">
     <%= form.label "Posicion" %>
     <%= form.select :position, enum_options_for_select(Banner, :position) %>
-
   </div>
 
   <%= form.fields_for :image do |img_form| %>
     <div class="form-group">
       <%= img_form.label :picture, 'Imagen' %>
-      <%= img_form.file_field  :picture, id: "files"%>
+      <%= img_form.file_field  :picture, id: "files" %>
     </div>
   <% end %>
 

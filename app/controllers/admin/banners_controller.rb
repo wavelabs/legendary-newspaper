@@ -11,7 +11,6 @@ class Admin::BannersController < Admin::BaseController
 
   def create
     @banner = Banner.new(banner_params)
-    Banner.delete_by_position(banner_params[:position])
     respond_to do |format|
       if @banner.save
         format.html { redirect_to admin_banner_path(@banner), notice: 'Banner was successfully created.' }

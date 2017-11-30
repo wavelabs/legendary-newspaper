@@ -1,6 +1,6 @@
 <div class="content">
   <div class="banner-content">
-    <% if @top_banner != nil%>
+    <% if @top_banner && @top_banner.image.picture.exists? %>
       <%= image_tag @top_banner.image.picture, class: "img-responsive"%>
     <% end %>
   </div>
