@@ -14,4 +14,8 @@ class Article < ApplicationRecord
   default_scope { order("created_at DESC") }
   scope :approved, -> { where(published: true) }
   scope :unapproved, -> { where(published: false) }
+
+  def first_image
+    images.first.picture
+  end
 end
