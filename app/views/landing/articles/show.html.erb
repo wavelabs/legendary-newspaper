@@ -1,24 +1,24 @@
-   <div class="main-content">
-     <div class="container">
-      <div class="mag-inner">
-        <div class="clearfix"></div>
-      </div>
-      <div class="col-md-12 mag-innert-left">
-        <div class="banner-bottom-left-grids">
-          <div class="single-left-grid">
-            <h1><%=@decorated_article.headline%></h1>
-            <br>
-            <button type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">
-              <%= image_tag @decorated_article.images.last.picture, class: "img-responsive"%>
-            </button>
-            <br>
-            <h2><small><%=@decorated_article.lead%></small></h2>
-            <p class="article"><%=@decorated_article.body%></p>
-            </div>
-          </div>
+<div class="main-content">
+ <div class="container">
+  <div class="mag-inner">
+    <div class="clearfix"></div>
+  </div>
+  <div class="col-md-12 mag-innert-left">
+    <div class="banner-bottom-left-grids">
+      <div class="single-left-grid">
+        <h1><%=@decorated_article.headline%></h1>
+        <br>
+        <button type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">
+          <%= image_tag @decorated_article.images.last.picture, class: "img-responsive"%>
+        </button>
+        <br>
+        <h2><small><%=@decorated_article.lead%></small></h2>
+        <p class="article"><%=@decorated_article.body%></p>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
