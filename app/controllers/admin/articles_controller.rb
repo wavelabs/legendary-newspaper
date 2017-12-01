@@ -9,6 +9,11 @@ class Admin::ArticlesController < Admin::BaseController
     @decorated_article = Admin::ArticlePresenter.new(@article, view_context)
   end
 
+  def new
+    @article = Article.new
+    @article.images.build
+  end
+
   def create
     @article = Article.new(article_params)
 
