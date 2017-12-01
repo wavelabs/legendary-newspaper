@@ -1,3 +1,7 @@
 default:
   branding: false
   language: es
+  toolbar: false
+  plugins:
+    - link
+    - media
