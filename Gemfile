@@ -27,6 +27,7 @@ gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'tinymce-rails'
 gem 'tinymce-rails-langs'
+gem "cocoon"
 
 # Configuration/Setup
 gem 'figaro'
