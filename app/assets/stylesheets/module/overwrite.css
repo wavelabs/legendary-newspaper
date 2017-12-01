@@ -2,6 +2,22 @@ hr {
       border-top: 1px solid #ddd;
 }
 
+.row {
+}
+
+.content.white {
+  padding-bottom: 1.5rem;
+  padding: 0.5rem 0 1.5rem 0;
+}
+
+.logo-header{
+  width: 50px;
+}
+
+.top-banner {
+  height: 150px;
+}
+
 .banner-content {
   background-color: grey;
   margin-left: 12%;
@@ -49,7 +65,7 @@ hr {
   }
 
   .copyright {
-    height: 80px;
+    height: 120px;
   }
 }
 

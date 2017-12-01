@@ -7,7 +7,7 @@
       <% @decorated_articles.each do |a|%>
         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
           <div class="card">
-            <%= link_to image_tag('pic.jpg'), article_path(a), class: "card-img-top img"%>
+            <%= link_to image_tag(a.images.last.picture), article_path(a), class: "card-img-top img"%>
             <div class="card-body">
                 <%= link_to a.headline, article_path(a), class: 'wd'  %>
             </div>
