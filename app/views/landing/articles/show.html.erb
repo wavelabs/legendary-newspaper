@@ -7,12 +7,12 @@
     <div class="banner-bottom-left-grids">
       <div class="single-left-grid">
         <h1><%=@decorated_article.headline%></h1>
+        <h2><small><%=@decorated_article.lead%></small></h2>
         <br>
         <button type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">
           <%= image_tag @decorated_article.images.last.picture, class: "img-responsive"%>
         </button>
         <br>
-        <h2><small><%=@decorated_article.lead%></small></h2>
         <p class="article"><%=@decorated_article.body%></p>
         </div>
       </div>
@@ -33,8 +33,10 @@
                 <% active = @decorated_article.images.first == i ? "active" : "" %>
                 <div class="item <%=active%>">
                   <%= image_tag i.picture, class: "img-responsive"%>
-                  <div class="carousel-caption">
-                    <h2>Heading</h2>
+                  <div class="slider-footer">
+                    <center>
+                      <p><%= i.description %></p>
+                    </center>
                   </div>
                 </div>
               <% end %>
