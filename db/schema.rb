@@ -83,9 +83,11 @@ ActiveRecord::Schema.define(version: 20171201145045) do
     t.string "picture_content_type"
     t.integer "picture_file_size"
     t.datetime "picture_updated_at"
+    t.bigint "banner_id"
     t.string "pictureable_type"
     t.bigint "pictureable_id"
     t.string "description"
+    t.index ["banner_id"], name: "index_images_on_banner_id"
     t.index ["pictureable_type", "pictureable_id"], name: "index_images_on_pictureable_type_and_pictureable_id"
   end
 
@@ -97,4 +99,5 @@ ActiveRecord::Schema.define(version: 20171201145045) do
 
   add_foreign_key "articles", "authors"
   add_foreign_key "articles", "sections"
+  add_foreign_key "images", "banners"
 end
