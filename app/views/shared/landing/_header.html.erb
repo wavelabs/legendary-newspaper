@@ -4,8 +4,13 @@
       <div class="container">
         <div class="navbar-header">
           <div class="logo-header">
-            <%= link_to image_tag('latucu.png'), root_path, class: "navbar-brand"%>
+            <%= link_to image_tag('latucu.png'), root_path, class: "navbar-brand" %>
           </div>
+          <ul>
+            <% Section.all.each do |section| %>
+              <li><%= link_to section.name, articles_section_path(section: section.name) %></li>
+            <% end %>
+          </ul>
         </div>
      </div>
     </nav>

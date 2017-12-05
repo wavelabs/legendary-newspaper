@@ -14,6 +14,8 @@ class Article < ApplicationRecord
   default_scope { order("created_at DESC") }
   scope :approved, -> { where(published: true) }
   scope :unapproved, -> { where(published: false) }
+  scope :by_section, -> (section_name) { joins(:section).where("sections.name = ?", section_name) }
+
 
   def first_image
     images.first.picture
