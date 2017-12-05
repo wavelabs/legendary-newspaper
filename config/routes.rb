@@ -12,13 +12,13 @@ Rails.application.routes.draw do
   namespace :editor do
     root 'articles#index'
     resources :articles
-    resources :sections
     resources :authors
   end
 
   namespace :admin do
     root 'articles#index'
     resources :articles, except: [ :show ]
+    resources :sections
     resources :editors
     resources :banners
   end

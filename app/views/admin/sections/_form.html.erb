@@ -1,4 +1,4 @@
-<%= form_with(model: [ :editor, section ], local: true) do |form| %>
+<%= form_with(model: [ :admin, section ], local: true) do |form| %>
   <% if section.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(section.errors.count, "error") %> impidieron que esta sección se guardara:</h2>
