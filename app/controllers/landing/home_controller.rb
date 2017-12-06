@@ -8,6 +8,9 @@ class Landing::HomeController < Landing::BaseController
     Section.all.each do |section|
       articles = Article.by_section(section.name)
       instance_variable_set("@#{section.name.downcase}_articles", articles)
+      # este each va a crear variables de instancia por cada nombre de seccion
+      # Ejemplo Secciones Deportes, Sociedad, se crean @deportes_articles, @sociedad_articles
+      # borrar este bloque cuando lo entiendas
     end
   end
 

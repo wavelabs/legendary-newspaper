@@ -8,7 +8,7 @@
           </div>
           <ul>
             <% Section.all.each do |section| %>
-              <li><%= link_to section.name, articles_section_path(section: section.name) %></li>
+              <li><%= link_to section.name, articles_section_path(section_name: section.name) %></li>
             <% end %>
           </ul>
         </div>
