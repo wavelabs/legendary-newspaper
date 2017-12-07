@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   scope module: 'landing' do
     root 'home#index'
-    get '/:section_name' => 'home#section', as: :articles_section
+    get '/:id' => 'home#section', as: :articles_section
     resources :articles, only: [ :show ]
   end
 end

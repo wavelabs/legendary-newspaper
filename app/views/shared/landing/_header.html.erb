@@ -18,7 +18,7 @@
           <ul class="nav navbar-nav">
             <li><%= link_to 'Tapa', root_path %></li>
             <% Section.with_articles.each do |section| %>
-              <li><%= link_to section.name, articles_section_path(section_name: section.name) %></li>
+              <li><%= link_to section.name, articles_section_path(section) %></li>
             <% end %>
           </ul>
         </div>

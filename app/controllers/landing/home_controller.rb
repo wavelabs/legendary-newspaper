@@ -5,7 +5,7 @@ class Landing::HomeController < Landing::BaseController
   end
 
   def section
-    @section = Section.find_by(name: params[:section_name])
-    @section_articles = @section.articles.approved.by_section(params[:section_name]).collect { |article| Landing::ArticlePresenter.new(article, view_context) }
+    @section = Section.friendly.find(params[:id])
+    @section_articles = @section.articles.approved.collect { |article| Landing::ArticlePresenter.new(article, view_context) }
   end
 end
