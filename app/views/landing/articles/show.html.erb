@@ -1,58 +1,64 @@
-<div class="main-content">
- <div class="container">
-  <div class="mag-inner">
-    <div class="clearfix"></div>
-  </div>
-  <div class="col-md-12 mag-innert-left">
-    <div class="banner-bottom-left-grids">
-      <div class="single-left-grid">
-        <h1><%=@decorated_article.headline%></h1>
-        <h2><small><%=@decorated_article.lead%></small></h2>
-        <br>
-        <button type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">
-          <%= image_tag @decorated_article.images.last.picture, class: "img-responsive"%>
-        </button>
-        <br>
-        <p class="article"><%=@decorated_article.body%></p>
+<%= render 'shared/landing/banner_content' %>
+
+<hr></hr>
+
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+  <div class="article-box">
+    <div class="mag-inner">
+      <div class="clearfix"></div>
+    </div>
+    <div class="col-md-12 mag-innert-left">
+      <div class="banner-bottom-left-grids">
+        <div class="single-left-grid">
+          <h1><%=@decorated_article.headline%></h1>
+          <h2><small><%=@decorated_article.lead%></small></h2>
+          <br>
+          <button type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">
+            <%= image_tag @decorated_article.images.last.picture, class: "img-responsive"%>
+          </button>
+          <br>
+          <p class="article"><%=@decorated_article.body%></p>
+          </div>
         </div>
+    </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <section class="section-white">
+          <div class="container">
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+              <div class="carousel-inner">
+                <%  @decorated_article.images.each do |i|%>
+                  <% active = @decorated_article.images.first == i ? "active" : "" %>
+                  <div class="item <%=active%>">
+                    <%= image_tag i.picture, class: "img-responsive"%>
+                    <div class="slider-footer">
+                      <center>
+                        <p><%= i.description %></p>
+                      </center>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+
+          </div>
+        </section>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <section class="section-white">
-        <div class="container">
-
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-            <div class="carousel-inner">
-              <%  @decorated_article.images.each do |i|%>
-                <% active = @decorated_article.images.first == i ? "active" : "" %>
-                <div class="item <%=active%>">
-                  <%= image_tag i.picture, class: "img-responsive"%>
-                  <div class="slider-footer">
-                    <center>
-                      <p><%= i.description %></p>
-                    </center>
-                  </div>
-                </div>
-              <% end %>
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-          </div>
-
-        </div>
-      </section>
-    </div>
-  </div>
-</div>
+<%= render 'shared/landing/banner_rigth'%>

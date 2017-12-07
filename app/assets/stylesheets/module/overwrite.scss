@@ -2,6 +2,27 @@ hr {
       border-top: 1px solid #ddd;
 }
 
+button {
+  background: rgba(76, 175, 80, 0.0);
+  border: none;
+}
+
+.main-title-head {
+  background-image: image_url('separator.png');
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.article-box {
+  margin-left: 15px;
+}
+
+.section-box {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #333;
 }
@@ -53,8 +74,8 @@ hr {
   margin-bottom: 15px;
 }
 
-h3.tittle{
-  background-color: #d259a1;
+h3.tittle, h2.tittle {
+  background: rgba(76, 175, 80, 0.0);
 }
 .slider-footer{
   margin-top: 10px;
@@ -79,7 +100,7 @@ h3.tittle{
 }
 
 .top-banner {
-  height: 150px;
+  max-height: 150px;
 }
 
 .banner-content {
@@ -92,7 +113,6 @@ h3.tittle{
 
 .banner-right {
   margin-right: 12%;
-  margin-top: 10px;
   margin-bottom: 20px;
 }
 

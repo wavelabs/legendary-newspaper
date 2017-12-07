@@ -10,14 +10,14 @@
             <span class="icon-bar"></span>
           </button>
           <div class="logo-header">
-            <%= link_to image_tag('logoColor.jpg'), root_path, class: "navbar-brand" %>
+            <%= link_to image_tag('logoColor.png'), root_path, class: "navbar-brand" %>
           </div>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><%= link_to 'Tapa', root_path %></li>
-            <% Section.all.each do |section| %>
+            <% Section.with_articles.each do |section| %>
               <li><%= link_to section.name, articles_section_path(section_name: section.name) %></li>
             <% end %>
           </ul>

@@ -1,4 +1,6 @@
 class Article < ApplicationRecord
+  LIMIT_FOR_HOME = 8
+
   belongs_to :section, foreign_key: :section_id
   belongs_to :author, foreign_key: :author_id, optional: true
 
@@ -15,7 +17,7 @@ class Article < ApplicationRecord
   scope :approved, -> { where(published: true) }
   scope :unapproved, -> { where(published: false) }
   scope :by_section, -> (section_name) { joins(:section).where("sections.name = ?", section_name) }
-
+  scope :recent, -> { limit(LIMIT_FOR_HOME) }
 
   def first_image
     images.first.picture
