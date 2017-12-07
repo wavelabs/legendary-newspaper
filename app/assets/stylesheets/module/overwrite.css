@@ -2,8 +2,55 @@ hr {
       border-top: 1px solid #ddd;
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #333;
+}
+
+.navbar-toggle {
+  background-color: #ffffff!important;
+}
+
+@media (max-width: 800px){
+  .navbar-nav {
+      margin-left: 14em;
+  }
+}
+
+@media (min-width: 893px) and (max-width: 1200px)  {
+  .navbar-nav {
+      margin-left: 14em;
+  }
+}
+
+.card-img-top img{
+  min-height: 135px;
+  max-height: 135px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 575px) {
+  .card-img-top img{
+    max-height: 100%;
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .card-img-top img{
+    max-height: 100%;
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .card-img-top img{
+    max-height: 112px;
+  }
+}
+
 .white-box {
   background-color: white;
+  margin-bottom: 15px;
 }
 
 h3.tittle{
@@ -25,11 +72,10 @@ h3.tittle{
 .content.white {
   padding-bottom: 1.5rem;
   padding: 0.5rem 0 1.5rem 0;
-  height: 100px;
 }
 
 .logo-header{
-  width: 60px;
+  width: 225px;
 }
 
 .top-banner {
@@ -66,12 +112,14 @@ h3.tittle{
 .contact-box-img {
   width: 40px;
 }
+
 .copyright {
   padding: 0px;
   height: 50px;
   padding-top: 5px;
   margin-top: 2%;
 }
+
 .social-media {
   float: left;
   width: 40px;
@@ -88,7 +136,14 @@ h3.tittle{
   }
 
   .logo-header {
-    width: 75px;
+    width: 225px;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .copyright {
+    height: 100px;
   }
 }
 
@@ -109,10 +164,33 @@ p.article {
   font-size: 20px;
 }
 
+
 .card-body {
   text-align: left;
+  height: 10rem;
+}
+
+@media (max-width: 575px) {
   height: 8rem;
 }
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+  height: 8rem;
+}
+
+@media (min-width: 768px) and (max-width: 892px) {
+  .card-body {
+    height: 9rem;
+  }
+}
+
+@media (min-width: 893px) and (max-width: 1200px) {
+  .card-body {
+    height: 10rem;
+  }
+}
+
 
 .card {
   margin-bottom: 10px;
@@ -131,7 +209,6 @@ p.article {
 @media (max-width: 575px) {
   .card {
     width: 80%;
-    margin: 10px;
   }
 }
 
@@ -139,17 +216,9 @@ p.article {
 @media (min-width: 576px) and (max-width: 767px) {
     .card {
     width: 80%;
-    margin: 10px;
   }
 
   .banner-right {
     margin-left: 10%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .card {
-    width: 15rem;
-    margin: 10px;
   }
 }

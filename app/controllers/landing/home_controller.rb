@@ -4,7 +4,7 @@ class Landing::HomeController < Landing::BaseController
     @top_banner = Banner.by_position("top").last
     @banner_right_first = Banner.by_position("right_first").last
     @banner_right_second = Banner.by_position("right_second").last
-
+    @section = Section.all
     Section.all.each do |section|
       articles = Article.by_section(section.name)
       instance_variable_set("@#{section.name.downcase}_articles", articles)
