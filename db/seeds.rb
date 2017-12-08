@@ -11,9 +11,3 @@ puts "Creating Sections"
 %w(Deportes Espectaculos Sociedad).each do |section_name|
   Section.find_or_create_by(name: section_name)
 end
-
-puts "Creating Articles"
-Section.all.each do |section|
-  Article.create_with(lead: "Copete_#{section.id}", body: "Cuerpo_#{section.id}", section: section)
-         .find_or_create_by(headline: "Titulo_#{section.id}")
-end
