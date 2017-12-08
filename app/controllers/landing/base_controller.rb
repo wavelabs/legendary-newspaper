@@ -8,5 +8,6 @@ class Landing::BaseController < ApplicationController
     @top_banner = Banner.by_position("top").last
     @banner_right_first = Banner.by_position("right_first").last
     @banner_right_second = Banner.by_position("right_second").last
+    @banner_right_third = Banner.by_position("right_third").last
   end
 end

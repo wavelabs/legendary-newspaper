@@ -36,8 +36,16 @@
     <%= form.select :author_id, authors_for_select, { include_blank: "Seleccionar Autor" }, class: 'form-control' %>
   </div>
 
+
   <div class="form-group">
-    <%= form.label "Publicar?" %>
+    <%= form.fields_for :images do |g| %>
+        <%= render 'image_fields', f: g %>
+        <%= link_to_add_association 'Agregar Imagen', form, :images, class: "btn btn-success links" %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <center><%= form.label "Publicar?" %></center>
     <%= form.check_box :published, class: 'form-control' %>
   </div>
 

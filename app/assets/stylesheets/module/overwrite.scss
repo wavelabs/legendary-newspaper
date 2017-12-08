@@ -2,6 +2,24 @@ hr {
       border-top: 1px solid #ddd;
 }
 
+.image-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 5px;
+  background: rgba(255,255,255,0.5);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  letter-spacing: 3px;
+}
+
+.image-box {
+  position: relative;
+  width: 100%;
+}
+
 button {
   background: rgba(76, 175, 80, 0.0);
   border: none;
@@ -211,13 +229,12 @@ p.article {
   }
 }
 
-
 .card {
   margin-bottom: 10px;
   margin-top: 10px;
   -webkit-box-shadow: 0 10px 6px -6px #777;
-                -moz-box-shadow: 0 10px 6px -6px #777;
-                box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
 }
 
 @media (max-width: 575px) {

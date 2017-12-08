@@ -9,4 +9,9 @@
       <%= image_tag @banner_right_second.image.picture, class: "img-responsive"%>
     <% end %>
   </div>
+  <div class="banner-right">
+    <% if @banner_right_third && @banner_right_third.image.picture.exists? %>
+      <%= image_tag @banner_right_third.image.picture, class: "img-responsive"%>
+    <% end %>
+  </div>
 </div>
