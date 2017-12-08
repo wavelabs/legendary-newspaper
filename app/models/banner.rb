@@ -1,6 +1,6 @@
 class Banner < ApplicationRecord
   include EnumI18nHelper
-  enum position: { top: 1, right_first: 2, right_second: 3 }
+  enum position: { top: 1, right_first: 2, right_second: 3, right_third: 4 }
 
   before_create :delete_by_position
 
