@@ -15,12 +15,8 @@
           <br>
           <button type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">
             <div class="image-box">
+            <div class="image-counter"><i class="glyphicon glyphicon-camera"></i>   <%=@decorated_article.images.count%></div>
               <%= image_tag @decorated_article.first_image, class: "img-responsive"%>
-            </div>
-            <div class="image-counter">
-              <i class="glyphicon glyphicon-camera">
-              </i>
-                <%=@decorated_article.images.count%>
             </div>
           </button>
           <br>
