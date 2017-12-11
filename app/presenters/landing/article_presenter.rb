@@ -15,8 +15,21 @@ class Landing::ArticlePresenter < Landing::BasePresenter
     @record.section_name
   end
 
-  def author_name
-    @record.author ? @record.author_full_name : 'Anónimo'
+  def contributor
+    if has_contributor?
+      "<strong>Colaborador:</strong> #{@record.contributor }".html_safe
+    end
   end
 
+  def has_contributor?
+    !@record.contributor.blank?
+  end
+
+  def source_url
+    @record.source_url.html_safe if has_source_url?
+  end
+
+  def has_source_url?
+    !@record.source_url.blank?
+  end
 end

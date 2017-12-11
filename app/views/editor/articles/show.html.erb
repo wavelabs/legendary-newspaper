@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Autor:</strong><br>
-  <%= @decorated_article.author_name %>
+  <strong>Colaborador:</strong><br>
+  <%= @decorated_article.contributor %>
 </p>
 
 <p>
@@ -23,6 +23,11 @@
 <p>
   <strong>Cuerpo:</strong><br>
   <%= @decorated_article.body %>
+</p>
+
+<p>
+  <strong>Fuente:</strong><br>
+  <%= link_to "#{@decorated_article.source_url}", @decorated_article.source_url %>
 </p>
 
 <p>

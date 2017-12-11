@@ -15,8 +15,12 @@ class Editor::ArticlePresenter < Editor::BasePresenter
     @record.section_name
   end
 
-  def author_name
-    @record.author ? @record.author_full_name : 'Anónimo'
+  def contributor
+    @record.contributor if @record.contributor
+  end
+
+  def source_url
+    @record.source_url.html_safe
   end
 
   def is_published?
