@@ -14,31 +14,37 @@
       <% end %>
 
       <div class="form-group">
-        <%= form.label "Título" %>
+        <%= form.label "Título (Obligatorio)" %>
         <%= form.text_field :headline, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= form.label "Copete" %>
+        <%= form.label "Copete (Obligatorio)" %>
         <%= form.text_field :lead, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= form.label "Cuerpo" %>
+        <%= form.label "Cuerpo (Obligatorio)" %>
         <%= form.text_area :body, class: 'form-control tinymce', rows: 40, cols: 12 %>
       </div>
 
       <div class="form-group">
-        <%= form.label "Sección" %>
+        <%= form.label "Sección (Obligatorio)" %>
         <%= form.select :section_id, sections_for_select, { include_blank: "Seleccionar Sección" }, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= form.label "Autor" %>
-        <%= form.select :author_id, authors_for_select, { include_blank: "Seleccionar Autor" }, class: 'form-control' %>
+        <%= form.label "Colaborador (Opcional)" %>
+        <%= form.text_field :contributor, class: 'form-control' %>
       </div>
 
       <div class="form-group">
+        <%= form.label "URL Fuente (Si es que corresponde)" %>
+        <%= form.text_field :source_url, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label "Imágenes (Al menos una)" %>
         <%= form.fields_for :images do |g| %>
             <%= render 'image_fields', f: g %>
             <%= link_to_add_association 'Agregar Imagen', form, :images, class: "btn btn-success links" %>
