@@ -2,6 +2,11 @@ hr {
       border-top: 1px solid #ddd;
 }
 
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .image-counter {
   position: absolute;
   bottom: 15px;
@@ -49,17 +54,6 @@ button {
   background-color: #ffffff!important;
 }
 
-@media (max-width: 800px){
-  .navbar-nav {
-      margin-left: 14em;
-  }
-}
-
-@media (min-width: 893px) and (max-width: 1200px)  {
-  .navbar-nav {
-      margin-left: 14em;
-  }
-}
 
 .card-img-top img{
   min-height: 135px;
@@ -144,7 +138,6 @@ h3.tittle, h2.tittle {
 
 .contact-box {
   float: right;
-  padding-right: 4rem;
 }
 
 .contact-box-img {
@@ -152,9 +145,11 @@ h3.tittle, h2.tittle {
 }
 
 .copyright {
-  padding: 0px;
   height: 50px;
   padding-top: 5px;
+  padding-right: 40px;
+  padding-bottom: 0px;
+  padding-left: 0px;
   margin-top: 2%;
 }
 
@@ -170,7 +165,7 @@ h3.tittle, h2.tittle {
   }
 
   .copyright {
-    height: 120px;
+    height: 90px;
   }
 
   .logo-header {
@@ -181,7 +176,7 @@ h3.tittle, h2.tittle {
 
 @media (min-width: 576px) and (max-width: 767px) {
   .copyright {
-    height: 100px;
+    height: 50px;
   }
 }
 
