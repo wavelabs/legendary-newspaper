@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   namespace :editor do
     root 'articles#index'
     resources :articles
-    resources :authors
   end
 
   namespace :admin do
