@@ -2,25 +2,27 @@
   <div class="row">
     <div class="copyright">
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-        <div class="social-media">
-          <%= link_to image_tag('facebook.png'), 'https://www.facebook.com/', class: "img"%>
+        <div class="fa-hover social-media">
+          <%= link_to 'https://www.facebook.com/' do %>
+            <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+          <% end %>
         </div>
 
-        <div class="social-media">
-          <%= link_to image_tag('instagram-gris.png'), 'https://www.instagram.com/', class: "img"%>
+        <div class="fa-hover social-media">
+          <%= link_to 'https://www.instagram.com/' do %>
+            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+          <% end %>
         </div>
 
-        <div class="social-media">
-          <%= link_to image_tag('twitter.png'), 'https://twitter.com/', class: "img"%>
+        <div class="fa-hover social-media">
+          <%= link_to 'https://www.twitter.com/' do %>
+            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+          <% end %>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-        <p class="company-box">&copy; 2017 Company <a href="http://wavelabs-studio.com/">Wavelabs</a> </p>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <div class="contact-box">
-          <%= image_tag 'whatsappbn.png', class: "contact-box-img" %>
-          <span class="phone">3815123456</span>
+        <div class="fa-hover phone">
+          <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i> 3815123456
         </div>
       </div>
     </div>
