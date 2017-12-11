@@ -47,7 +47,7 @@
         <%= form.label "Imágenes (Al menos una)" %>
         <%= form.fields_for :images do |g| %>
             <%= render 'image_fields', f: g %>
-            <%= link_to_add_association 'Agregar Imagen', form, :images, class: "btn btn-success links" %>
+            <%= link_to_add_association 'Agregar Imagen', form, :images, class: "btn btn-success links btn-add-img",  'data-association-insertion-method' => 'append'  %>
         <% end %>
       </div>
 
