@@ -11,7 +11,7 @@ class Section < ApplicationRecord
   scope :with_articles, -> { joins(:articles).distinct }
 
   def recent_articles
-    self.articles.recent
+    self.articles.approved.recent
   end
 
   private
