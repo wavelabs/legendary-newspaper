@@ -22,7 +22,7 @@ class Editor::ArticlesController < Editor::BaseController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to editor_article_path(@article), notice: 'Article was successfully created.' }
+        format.html { redirect_to editor_article_path(@article), notice: 'Articulo creado correctamente.' }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new }
@@ -34,7 +34,7 @@ class Editor::ArticlesController < Editor::BaseController
   def update
     respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to editor_article_path(@article), notice: 'Article was successfully updated.' }
+        format.html { redirect_to editor_article_path(@article), notice: 'Articulo actualizado.' }
         format.json { render :show, status: :ok, location: @article }
       else
         format.html { render :edit }
@@ -46,7 +46,7 @@ class Editor::ArticlesController < Editor::BaseController
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to editor_articles_url, notice: 'Article was successfully destroyed.' }
+      format.html { redirect_to editor_articles_url, notice: 'Articulo eliminado.' }
       format.json { head :no_content }
     end
   end
