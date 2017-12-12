@@ -3,33 +3,34 @@
     <div class="copyright">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
         <div class="social-media">
-          <%= link_to image_tag('facebook.png'), 'https://www.facebook.com/', class: "img"%>
+          <%= link_to 'https://www.facebook.com/' do %>
+            <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+          <% end %>
         </div>
 
         <div class="social-media">
-          <%= link_to image_tag('instagram-gris.png'), 'https://www.instagram.com/', class: "img"%>
+          <%= link_to 'https://www.instagram.com/' do %>
+            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+          <% end %>
         </div>
 
         <div class="social-media">
-          <%= link_to image_tag('twitter.png'), 'https://twitter.com/', class: "img"%>
+          <%= link_to 'https://www.twitter.com/' do %>
+            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+          <% end %>
         </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
         <div class="contact-box">
-          <div>
-            <%= image_tag 'whatsappbn.png', class: "contact-box-img" %>
-            <span class="phone">3815123456</span>
+          <div class="phone">
+            <div class="">
+              <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
+              3815123456
+            </div>
           </div>
-          <span class="social social-facebook"></span>
         </div>
       </div>
     </div>
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $().UItoTop({ easingType: 'easeOutQuart' });
-      });
-    </script>
     <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
   </div>
 </div>
