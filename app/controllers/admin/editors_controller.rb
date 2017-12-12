@@ -20,7 +20,7 @@ class Admin::EditorsController < Admin::BaseController
 
     respond_to do |format|
       if @editor.save
-        format.html { redirect_to admin_editor_path(@editor), notice: 'Editor was successfully created.' }
+        format.html { redirect_to admin_editor_path(@editor), notice: 'Editor creado correctamente.' }
         format.json { render :show, status: :created, location: @editor }
       else
         format.html { render :new }
@@ -32,7 +32,7 @@ class Admin::EditorsController < Admin::BaseController
   def update
     respond_to do |format|
       if @editor.update(editor_params)
-        format.html { redirect_to admin_editor_path(@editor), notice: 'Editor was successfully updated.' }
+        format.html { redirect_to admin_editor_path(@editor), notice: 'Editor actualizado.' }
         format.json { render :show, status: :ok, location: @editor }
       else
         format.html { render :edit }
@@ -44,7 +44,7 @@ class Admin::EditorsController < Admin::BaseController
   def destroy
     @editor.destroy
     respond_to do |format|
-      format.html { redirect_to admin_editors_url, notice: 'Editor was successfully destroyed.' }
+      format.html { redirect_to admin_editors_url, notice: 'Editor eliminado correctamente.' }
       format.json { head :no_content }
     end
   end

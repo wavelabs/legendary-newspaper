@@ -1,7 +1,10 @@
 <%= form_with(model: [ :admin, section ], local: true) do |form| %>
   <% if section.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(section.errors.count, "error") %> impidieron que esta sección se guardara:</h2>
+    <div class="alert alert-danger" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h2><%= pluralize(section.errors.count,"error impidio", "errores impidieron") %> que esta sección se guardara:</h2>
 
       <ul>
       <% section.errors.full_messages.each do |message| %>
@@ -17,6 +20,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit "Crear Sección" %>
+    <%= form.submit "Guardar" %>
   </div>
 <% end %>

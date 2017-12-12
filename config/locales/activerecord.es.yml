@@ -1,6 +1,25 @@
 es:
   activerecord:
+    model:
+      image:
+        one: imagen
+        other: imagenes
+      section:
+        one: Sección
+        other: Secciones
     attributes:
+      image:
+        description: Descripcion
+      editor:
+        password: Contraseña
+      section:
+        name: Nombre
+      article:
+        section_id: Sección
+        section: Sección
+        headline: Titulo
+        lead: Copete
+        body: Cuerpo
       banner:
         position:
           one: "Posicion"
@@ -10,3 +29,12 @@ es:
           right_first: "Superior derecha"
           right_second: "Medio derecha"
           right_third: "Inferior derecha"
+        image: Imagen
+    errors:
+      messages:
+        required: es requerido
+        blank: este campo no puede estar en blanco
+        record_invalid: "La validación falló: %{errors}"
+        restrict_dependent_destroy:
+          has_one: No se puede eliminar el registro porque existe un %{record} dependiente
+          has_many: No se puede eliminar el registro porque existen %{record} dependientes

@@ -13,7 +13,7 @@ class Admin::BannersController < Admin::BaseController
     @banner = Banner.new(banner_params)
     respond_to do |format|
       if @banner.save
-        format.html { redirect_to admin_banner_path(@banner), notice: 'Banner was successfully created.' }
+        format.html { redirect_to admin_banner_path(@banner), notice: 'Banner agregado correctamente.' }
         format.json { render :show, status: :created, location: @banner }
       else
         format.html { render :new }
@@ -25,7 +25,7 @@ class Admin::BannersController < Admin::BaseController
   def destroy
     @banner.destroy
     respond_to do |format|
-      format.html { redirect_to admin_banners_url, notice: 'Banner was successfully destroyed.' }
+      format.html { redirect_to admin_banners_url, notice: 'Banner eliminado.' }
       format.json { head :no_content }
     end
   end

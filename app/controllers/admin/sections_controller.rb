@@ -20,7 +20,7 @@ class Admin::SectionsController < Admin::BaseController
 
     respond_to do |format|
       if @section.save
-        format.html { redirect_to admin_section_path(@section), notice: 'Section was successfully created.' }
+        format.html { redirect_to admin_section_path(@section), notice: 'Sección creada.' }
         format.json { render :show, status: :created, location: @section }
       else
         format.html { render :new }
@@ -32,7 +32,7 @@ class Admin::SectionsController < Admin::BaseController
   def update
     respond_to do |format|
       if @section.update(section_params)
-        format.html { redirect_to admin_section_path(@section), notice: 'Section was successfully updated.' }
+        format.html { redirect_to admin_section_path(@section), notice: 'Sección actualizada.' }
         format.json { render :show, status: :ok, location: @section }
       else
         format.html { render :edit }
@@ -44,7 +44,7 @@ class Admin::SectionsController < Admin::BaseController
   def destroy
     @section.destroy
     respond_to do |format|
-      format.html { redirect_to admin_sections_url, notice: 'Section was successfully destroyed.' }
+      format.html { redirect_to admin_sections_url, notice: 'Sección eliminada.' }
       format.json { head :no_content }
     end
   end
