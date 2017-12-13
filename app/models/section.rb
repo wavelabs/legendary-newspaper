@@ -8,7 +8,7 @@ class Section < ApplicationRecord
 
   validates :name, presence: true
 
-  scope :with_articles, -> { joins(:articles).distinct }
+  scope :with_articles, -> { joins(:articles).merge(Article.approved).distinct }
 
   def recent_articles
     self.articles.recent
