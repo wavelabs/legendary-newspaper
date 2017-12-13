@@ -2,9 +2,13 @@ hr {
       border-top: 1px solid #ddd;
 }
 
-.row {
-  margin-right: 0;
-  margin-left: 0;
+.initial-content {
+  min-height: 500px;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
 }
 
 .image-counter {
