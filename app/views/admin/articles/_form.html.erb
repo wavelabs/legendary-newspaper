@@ -36,7 +36,6 @@
     <%= form.select :author_id, authors_for_select, { include_blank: "Seleccionar Autor" }, class: 'form-control' %>
   </div>
 
-
   <div class="form-group">
     <%= form.fields_for :images do |g| %>
         <%= render 'image_fields', f: g %>

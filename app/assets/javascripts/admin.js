@@ -19,3 +19,4 @@
 //= require cocoon
 //= require rails-ujs
 //= require tinymce
+//= require upload-image
