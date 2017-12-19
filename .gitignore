@@ -24,6 +24,8 @@
 
 # Ignore public folder
 public/
+/public/
+/public/*
 
 # Ignore application configuration
 /config/application.yml
