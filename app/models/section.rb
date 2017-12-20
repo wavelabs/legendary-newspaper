@@ -8,7 +8,7 @@ class Section < ApplicationRecord
 
   validates :name, presence: true
 
-  scope :with_articles, -> { joins(:articles).distinct }
+  scope :with_articles, -> { joins(:articles).where("articles.published = ?", true).distinct }
 
   def recent_articles
     self.articles.approved.recent
