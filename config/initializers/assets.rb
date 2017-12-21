@@ -3,3 +3,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( .svg .eot .woff .ttf )
 Rails.application.config.assets.precompile += %w(admin.scss editor.scss)
 Rails.application.config.assets.precompile += %w(admin.js editor.js)
+Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
