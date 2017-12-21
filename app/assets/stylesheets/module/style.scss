@@ -22,8 +22,8 @@ body a:hover,h5.top a:hover,.b-text h5 a:hover,.b-bottom-text h5 a:hover,.b-text
 
 }
 @font-face {
-   font-family: 'Roboto-Regular';
-   src: url(../assets/Roboto-Regular.ttf)format('truetype');
+  font-family: 'Roboto-Regular';
+  src: asset-url("Roboto-Regular.ttf")  format("truetype");
 }
 
 a:hover{
