@@ -1,6 +1,13 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <div class="alert alert-success" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <%= notice %>
+  </div>
+<% end %>
 
-<h1>Editors</h1>
+<h1>Editores</h1>
 
 <table>
   <thead>
@@ -14,9 +21,9 @@
     <% @editors.each do |editor| %>
       <tr>
         <td><%= editor.email %></td>
-        <td><%= link_to 'Show', admin_editor_path(editor) %></td>
-        <td><%= link_to 'Edit', edit_admin_editor_path(editor) %></td>
-        <td><%= link_to 'Destroy', admin_editor_path(editor), method: :delete, data: { confirm: 'Está Seguro?' } %></td>
+        <td><%= link_to 'Ver', admin_editor_path(editor) %></td>
+        <td><%= link_to 'Editar', edit_admin_editor_path(editor) %></td>
+        <td><%= link_to 'Eliminar', admin_editor_path(editor), method: :delete, data: { confirm: 'Está Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Editor', new_admin_editor_path %>
+<%= link_to 'Nuevo Editor', new_admin_editor_path %>

@@ -1,7 +1,14 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <div class="alert alert-success" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <%= notice %>
+  </div>
+<% end %>
 
 <p>
-  <strong>Posicion:</strong>
+  <strong>Posición:</strong>
   <%= @banner.position %>
 </p>
 <p>
@@ -11,5 +18,5 @@
   </div>
 </p>
 
-<%= link_to 'Edit', edit_admin_banner_path(@banner) %> |
-<%= link_to 'Back', admin_banners_path %>
+<%= link_to 'Editar', edit_admin_banner_path(@banner) %> |
+<%= link_to 'Regresar', admin_banners_path %>
