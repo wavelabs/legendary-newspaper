@@ -36,6 +36,6 @@ class Admin::BannersController < Admin::BaseController
     end
 
     def banner_params
-      params.require(:banner).permit(:position, image_attributes: [:id, :picture, :_destroy])
+      params.require(:banner).permit(:position, :link, image_attributes: [:id, :picture, :_destroy])
     end
 end
