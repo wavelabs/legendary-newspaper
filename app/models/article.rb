@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
   LIMIT_FOR_HOME = 8
-
+  
   belongs_to :section, foreign_key: :section_id
 
   has_many :images, dependent: :destroy, as: :pictureable
@@ -16,6 +16,7 @@ class Article < ApplicationRecord
   scope :unapproved, -> { where(published: false) }
   scope :by_section, -> (section_name) { joins(:section).where("sections.name = ?", section_name) }
   scope :recent, -> { limit(LIMIT_FOR_HOME) }
+  scope :with_visualizations, -> {where("visualizations > 0").reorder(visualizations: :desc).distinct.limit(4)}
 
   def first_image
     images.first.picture

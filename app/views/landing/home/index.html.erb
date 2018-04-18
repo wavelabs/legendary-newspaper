@@ -4,6 +4,7 @@
   <% @sections.each do |sec| %>
     <%= render 'shared/landing/home/section', section_name: sec.name, articles: sec.recent_articles %>
   <% end %>
+    <%= render 'shared/landing/home/section', section_name: "Populares", articles: @most_viewed %>
 </div>
 
 <%= render 'shared/landing/banner_rigth'%>
