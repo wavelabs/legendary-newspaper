@@ -14,6 +14,35 @@
           </ul>
         </li>
       </ul>
+      <ul class="nav navbar-nav not-nav">
+          <li class="button dropdown">
+          <% @articles_unapproved = Article.count_unapproved %>
+          <% if @articles_unapproved > 0 %>
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-flag"></i><span class="bubble"><%= @articles_unapproved %></span></a>
+          <% else %>
+            <a href="javascript:;" aria-expanded="false"><i class="fa  fa-flag-o"></i></a>
+          <% end %>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="nano nscroller has-scrollbar">
+                  <div class="content" tabindex="0" style="right: -15px;">
+                    <ul>
+                      <% Article.last_unapproved.each do |a| %>
+                        <li>
+                          <%= link_to edit_admin_article_path(a) do %>
+                            <i class="fa  fa-eye danger"></i>
+                            <%=a.headline.truncate(35)%>
+                          <% end %>
+                        </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                <div class="pane" style="display: none;"><div class="slider" style="height: 20px; top: 0px;"></div></div></div>
+                <ul class="foot"><li><%= link_to 'Ver Todos',admin_articles_path %></li></ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
     </div>
   </div>
 </div>
