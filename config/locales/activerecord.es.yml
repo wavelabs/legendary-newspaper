@@ -8,6 +8,7 @@ es:
         one: Sección
         other: Secciones
     attributes:
+      password_singup: "Ingrese Contraseña (%{length} caracteres minimos)"
       image:
         description: Descripcion
       editor:

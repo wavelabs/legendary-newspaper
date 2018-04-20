@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :admin, :editor
+  devise_for :admin
+
+  devise_for :editors, :skip => [:registrations]
+  as :editor do
+    get 'editors/edit' => 'devise/registrations#edit', :as => 'edit_editor_registration'
+    patch 'editors' => 'devise/registrations#update', :as => 'editor_registration'
+  end
 
   devise_scope :admin do
     get 'admin_login', to: 'devise/sessions#new'

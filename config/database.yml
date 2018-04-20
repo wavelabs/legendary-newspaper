@@ -7,15 +7,15 @@ development:
   <<: *default
   host: localhost
   database: legendary_newspaper_development
-  username: postgres
-  password: root
+  username: "postgres"
+  password: "miguel123"
 
 test:
   <<: *default
   host: localhost
   database: legendary_newspaper_test
-  username: postgres
-  password: root
+  username: "postgres"
+  password: "miguel123"
 
 production:
   <<: *default
