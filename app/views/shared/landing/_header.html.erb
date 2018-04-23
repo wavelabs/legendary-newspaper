@@ -25,4 +25,10 @@
       </div>
     </nav>
   </div>
+  <% weather = WeatherService.new().GetWeather %>
+  <p><%= image_tag("http://openweathermap.org/img/w/#{weather[:image]}.png")%></p>
+  <p>min:<%= weather[:temp_min] %>°C</p>
+  <p>max:<%= weather[:temp_max] %>°C</p>
+  <p>Humedad:<%= "#{weather[:humidity]}" %>%</p>
+
 </div>

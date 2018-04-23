@@ -29,6 +29,7 @@ gem 'jquery-rails'
 gem 'tinymce-rails'
 gem 'tinymce-rails-langs'
 gem "cocoon"
+gem 'httparty'
 
 # Configuration/Setup
 gem 'figaro'
