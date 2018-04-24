@@ -29,9 +29,10 @@
           <% end %>
         </div>
       </div>
+      <%= social_share_button_tag('Share to Facebook', :url => article_path(@decorated_article), desc: @decorated_article.body) %>
+      <a href="whatsapp://send?text=<%= request.original_url %>" id= "wsp"><i class="fa fa-whatsapp" id="whatsapp"></i></a>
     </div>
   </div>
-
   <%= render 'gallery_modal', images: @decorated_article.images %>
 </div>
 

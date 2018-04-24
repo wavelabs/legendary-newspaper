@@ -15,6 +15,7 @@ gem 'devise'
 gem "paperclip", "~> 5.0.0"
 gem 'paperclip-i18n'
 gem 'friendly_id', '~> 5.1.0'
+gem 'social-share-button'
 
 # Amazon web services
 gem 'aws-sdk', '~> 2'

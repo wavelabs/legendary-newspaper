@@ -9,3 +9,4 @@
 //= require module/owl.carousel
 //= require module/bootstrap-3.1.1.min
 //= require tinymce
+//= require social-share-button
