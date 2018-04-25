@@ -2,23 +2,18 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
 
 development:
   <<: *default
   host: localhost
   database: legendary_newspaper_development
-  username: postgres
-  password: miguel123
-
 test:
   <<: *default
   host: localhost
   database: legendary_newspaper_test
-  username: postgres
-  password: miguel123
 
 production:
   <<: *default
   database: legendary_newspaper_production
-  username: postgres
-  password: miguel123

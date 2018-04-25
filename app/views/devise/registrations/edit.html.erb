@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 col-sm-12 col-xs-12">
+    <div class="form-signin">
+      <h2 class="form-signin-heading text-center">Diario - Cambiar Contraseña</h2>
+
+      <%= form_for(resource, as: resource_name, url: editor_registration_path, html: { method: :patch, class: "edit_forms"}) do |f| %>
+        <%= devise_error_messages! %>
+        
+        <div class="form-group">
+          <%= f.label :new_password %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: t('activerecord.attributes.password_singup', length: @minimum_password_length), class: "form-control js-check-for-changes" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control js-check-for-changes' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :current_password %>
+          <%= f.password_field :current_password, autocomplete: "off", class: 'form-control js-check-for-changes' %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Guardar", class: "btn btn-lg btn-primary btn-block" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
