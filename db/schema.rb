@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171211010546) do
+ActiveRecord::Schema.define(version: 20180417193827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20171211010546) do
     t.boolean "published", default: false
     t.string "source_url"
     t.string "contributor"
+    t.integer "visualizations"
     t.index ["section_id"], name: "index_articles_on_section_id"
   end
 
@@ -57,6 +58,7 @@ ActiveRecord::Schema.define(version: 20171211010546) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "link"
   end
 
   create_table "editors", force: :cascade do |t|
