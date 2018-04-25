@@ -19,6 +19,11 @@
     <%= form.select :position, enum_options_for_select(Banner, :position) %>
   </div>
 
+  <div class="form-group">
+    <%= form.label "Link" %>
+    <%= form.text_field :link, class: 'form-control' %>
+  </div>
+
   <%= form.fields_for :image do |img_form| %>
     <div class="form-group">
       <%= img_form.label :picture, 'Imagen' %>

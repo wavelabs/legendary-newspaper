@@ -37,17 +37,21 @@
 
   <div class="banner-right">
     <% if @banner_right_first && @banner_right_first.image.picture.exists? %>
-      <%= image_tag @banner_right_first.image.picture, class: "img-responsive"%>
+      <%=link_to(image_tag(@banner_right_first.image.picture, class: "img-responsive"),
+       @banner_right_first.link, target: :_blank)%>
     <% end %>
   </div>
   <div class="banner-right">
     <% if @banner_right_second && @banner_right_second.image.picture.exists? %>
-      <%= image_tag @banner_right_second.image.picture, class: "img-responsive"%>
+      <%=link_to(image_tag(@banner_right_second.image.picture, class: "img-responsive"),
+       @banner_right_second.link, target: :_blank)%>
+
     <% end %>
   </div>
   <div class="banner-right">
     <% if @banner_right_third && @banner_right_third.image.picture.exists? %>
-      <%= image_tag @banner_right_third.image.picture, class: "img-responsive"%>
+      <%=link_to(image_tag(@banner_right_third.image.picture, class: "img-responsive"),
+       @banner_right_third.link, target: :_blank)%>
     <% end %>
   </div>
 </div>
