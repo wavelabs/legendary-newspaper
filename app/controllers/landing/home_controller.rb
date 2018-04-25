@@ -8,4 +8,8 @@ class Landing::HomeController < Landing::BaseController
     @section = Section.friendly.find(params[:id])
     @section_articles = @section.articles.approved.collect { |article| Landing::ArticlePresenter.new(article, view_context) }
   end
+
+  def carrousel
+    @decorated_articles = Article.for_carrousel
+  end
 end

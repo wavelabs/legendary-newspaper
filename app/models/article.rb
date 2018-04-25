@@ -16,6 +16,7 @@ class Article < ApplicationRecord
   scope :unapproved, -> { where(published: false) }
   scope :by_section, -> (section_name) { joins(:section).where("sections.name = ?", section_name) }
   scope :recent, -> { limit(LIMIT_FOR_HOME) }
+  scope :for_carrousel, -> { where(for_carrousel: true) }
 
   def first_image
     images.first.picture
