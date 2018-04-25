@@ -10,8 +10,8 @@
     <div class="col-md-12 mag-innert-left">
       <div class="banner-bottom-left-grids">
         <div class="single-left-grid">
-          <h1><%= @decorated_article.headline %></h1>
-          <h2><small><%= @decorated_article.lead %></small></h2>
+          <h1 class= "size-text" ><%= @decorated_article.headline %></h1>
+          <h2 class= "size-text" ><small><%= @decorated_article.lead %></small></h2>
           <br>
           <button type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">
             <div class="image-box">
@@ -25,7 +25,7 @@
           <%= @decorated_article.contributor %>
           <br>
           <% if @decorated_article.has_source_url? %>
-            <strong>Fuente:</strong> <%= link_to "#{@decorated_article.source_url}", @decorated_article.source_url %>
+            <strong>Fuente:</strong> <%= link_to "#{@decorated_article.source_url}", @decorated_article.source_url, class: 'size-text' %>
           <% end %>
         </div>
       </div> 
