@@ -226,11 +226,12 @@ figure {
 
 #whatsapp {
   text-align: center;
-  height: 18px;
-  width: 18px;
+  height: 28px;
+  width: 28px;
   border-radius: 3px;
   color: white;
   background: green;
+  padding-top: 5px;
 }
 
 #wsp {
@@ -239,6 +240,15 @@ figure {
   margin-right: 5px;
 }
 
+$size: 28px;
+
 .social-share-button {
-  display: contents;
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+    float: left;
+    display: flex;
+    margin-right: 5px;
+  }
 }

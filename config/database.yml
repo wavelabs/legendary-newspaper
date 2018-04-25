@@ -9,6 +9,7 @@ development:
   <<: *default
   host: localhost
   database: legendary_newspaper_development
+
 test:
   <<: *default
   host: localhost
