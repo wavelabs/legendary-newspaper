@@ -1,0 +1,28 @@
+<% weather = WeatherService.new().GetWeather %>
+<div class="thumbnail banner-right">
+  <div class="city-selected">
+    <article>
+      <div class="info">
+        <div class="city">San Miguel de Tucumán</div>
+        <div class="row">
+          <h4>Hoy: <%= Date.today.strftime("%e/%m/%Y") %></h4>
+        </div>
+        <div class="night">Humedad:<%= " #{weather[:humidity]}" %>%</div>
+        <div>
+          <div class="temp info-temp"><%= weather[:temp_min].to_i %>°</div>
+          <div class="icon info-temp">
+            <%= image_tag("http://openweathermap.org/img/w/#{weather[:image]}.png")%>
+          </div>
+        </div>
+
+        <div class="wind">
+          <svg version="1.1" id="wind" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 300.492 300.492" style="enable-background:new 0 0 300.492 300.492;" xml:space="preserve">
+          <%= render 'shared/landing/wind' %>
+          <span><%= weather[:wind] %> M/S</span>
+        </div>
+      </div>
+    </article>
+    <figure style="background-image: image_path("casatucuman.jpg")"></figure>
+  </div>
+</div>

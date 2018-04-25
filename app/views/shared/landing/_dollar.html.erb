@@ -1,0 +1,17 @@
+<div class="thumbnail banner-right">
+  <div class="row">
+    <% dolar = DolarService.new().GetDolar %>
+    <div id="dollar-title">
+      <h4 class="info-dollar align-title">Dólar hoy:</h4>
+      <h4 class="align-title" id="dollar-coin"><%= image_tag 'monedas.png' %></h4>
+    </div>
+    <div class="info-dollar">
+      <div class="col-lg-6 col-md-6 col-xs-6" >
+        <p id="dollar-purchase">Compra:</br>$ <%= dolar[:dolar_buy] %></p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-xs-6">
+        <p id="dollar-sale">Venta:</br>$ <%= dolar[:dolar_sale] %></p>
+      </div>
+    </div>
+  </div>
+</div>
