@@ -1,10 +1,8 @@
 <%= render 'shared/landing/banner_content' %>
-<%= render 'landing/home/carrousel' %>
 <hr></hr>
 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
   <% @sections.each do |sec| %>
     <%= render 'shared/landing/home/section', section_name: sec.name, articles: sec.recent_articles %>
   <% end %>
 </div>
-
 <%= render 'shared/landing/banner_rigth'%>
