@@ -4,27 +4,29 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <div class="art-img">
+          <div class="col-lg-8 col-sm-8 art-img">
             <%= image_tag @carrousel_articles.first.first_image, class: "img-size" %>
           </div>
-          <div class="art-info">
+          <div class="col-lg-4 col-sm-4 art-info">
             <h5 class="uno"><%= @carrousel_articles.first.section.name %></h5>
-            <h1 class="dos"><%= @carrousel_articles.first.headline %></h1>
+            <p class="dos"><%= link_to @carrousel_articles.first.headline, article_path(@carrousel_articles.first), class: 'link-color' %>
+            </p>
             <div class="line">_______</div>
-            <h4 class="tres"><%= @carrousel_articles.first.lead %></h4>
+            <p class="tres"><%= @carrousel_articles.first.lead %></p>
           </div>
         </div>
 
         <% @carrousel_articles.except(@carrousel_articles.first).each do |a|%>
           <div class="item">
-            <div class="art-img">
+            <div class="col-lg-8 col-sm-8 art-img">
               <%= image_tag a.first_image, class: "img-size" %>
             </div>
-            <div class="art-info">
+            <div class="col-lg-4 col-sm-4 art-info">
               <h5 class="uno"><%= a.section.name %></h5>
-              <h1 class="dos"><%= a.headline %></h1>
+              <p class="dos"><%= link_to a.headline, article_path(a), class: 'link-color' %>
+              </p>
               <div class="line">_______</div>
-              <h4 class="tres"><%= a.lead %></h4>
+              <p class="tres"><%= a.lead %></p>
             </div>
           </div>
         <% end %>

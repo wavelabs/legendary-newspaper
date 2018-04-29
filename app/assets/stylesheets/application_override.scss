@@ -7,25 +7,23 @@
   position: relative;
 }
 
-.art-img {
-  float: left;
-  width: 70%;
-  height: 100%;
-}
-
-.art-info {
-  float: right;
-  width: 30%;
-  height: 100%;
-}
-
 .carousel-inner {
   background-color: #7d07af;
+  height: 400px;
 }
 
 .uno, .dos, .tres {
   color: #ffffff;
   padding: 15px;
+  overflow: hidden;
+}
+
+.dos {
+  font-size: 25px;
+}
+
+.tres {
+  font-size: 15px;
 }
 
 #conteiner-carrousel {
@@ -34,5 +32,9 @@
 
 .line {
   color: #590f70;
-  padding: 15px;
+  padding: 10px;
+}
+
+.link-color {
+  color: #ffffff;
 }
