@@ -7,10 +7,19 @@
 }
 
 .carousel-inner {
-  background-color: #8d35b2;
-  height: 400px;
+  background-color: #3658E1;
 }
+@media (min-width: 700px) {
+  .carousel-inner {
+    background-repeat: no-repeat;
+    min-height: 400px;
+  }
 
+  .img-size {
+    height: 400px;
+  }
+
+}
 .uno, .dos {
   color: #ffffff;
   padding: 15px;
@@ -28,4 +37,25 @@
 
 .link-color {
   color: #ffffff;
+}
+
+.link-color:hover {
+  color: #6482E1;
+}
+
+.padding-less {
+  padding: 0px;
+}
+
+.opacity {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.carousel-fixed {
+  position: fixed;
+}
+
+.background-none {
+  background-color: rgba(0, 0, 0, 0.5);
 }

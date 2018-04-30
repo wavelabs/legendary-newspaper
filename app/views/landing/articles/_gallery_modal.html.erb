@@ -3,8 +3,8 @@
     <div class="modal-content">
       <section class="section-white">
         <div class="container">
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
+          <div id="carousel-example-generic" class="carousel slide carousel-fixed" data-ride="carousel">
+            <div class="carousel-inner background-none">
               <% images.each do |image|%>
                 <% active = images.first == image ? "active" : "" %>
                 <div class="item <%=active%>">

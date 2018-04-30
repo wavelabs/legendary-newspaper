@@ -4,29 +4,20 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <% art_to_carousel = @carrousel_articles.first(3) %>
-        <div class="item active">
-          <div class="col-xs-12 col-sm-6 col-lg-8 img-size">
-            <%= image_tag art_to_carousel.first.first_image %>
-          </div>
-          <div class="col-xs-6 col-lg-4">
-            <h5 class="uno"><%= art_to_carousel.first.section.name %></h5>
-            <h1 class="dos"><%= link_to art_to_carousel.first.headline, article_path(art_to_carousel.first), class: 'link-color' %>
-            </h1>
-          </div>
-        </div>
-
-        <% art_to_carousel.last(2).each do |a|%>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-lg-8 img-size">
-              <%= image_tag a.first_image %>
+          <% art_to_carousel.each do |a|%>
+            <% active = art_to_carousel.first == a ? "active" : "" %>
+            <div class="item <%=active%>">
+              <div class="col-xs-12 col-sm-12 col-lg-8  padding-less">
+                <%= image_tag a.first_image, class: 'img-responsive img-size' %>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-lg-4 img-size'">
+                <h5 class="uno"><%= a.section.name %></h5>
+                <hr class="opacity">
+                <h2 class="dos"><%= link_to a.headline, article_path(a), class: 'link-color' %>
+                </h2>
+              </div>
             </div>
-            <div class="col-xs-6 col-lg-4">
-              <h5 class="uno"><%= a.section.name %></h5>
-              <h1 class="dos"><%= link_to a.headline, article_path(a), class: 'link-color' %>
-              </h1>
-            </div>
-          </div>
-        <% end %>
+          <% end %>
       </div>
 
       <!-- Left and right controls -->
