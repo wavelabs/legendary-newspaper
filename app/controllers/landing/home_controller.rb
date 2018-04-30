@@ -3,6 +3,7 @@ class Landing::HomeController < Landing::BaseController
     @decorated_articles = Article.approved.collect { |article| Landing::ArticlePresenter.new(article, view_context) }
     @sections = Section.with_articles
     @most_viewed =Article.approved.with_visualizations
+    @carrousel_articles = Article.for_carrousel
   end
 
   def section

@@ -19,6 +19,7 @@ class Article < ApplicationRecord
   scope :count_unapproved, -> {where(published: false).count}
   scope :last_unapproved, -> {where(published: false).limit(4)}
   scope :with_visualizations, -> {where("visualizations > 0").reorder(visualizations: :desc).distinct.limit(4)}
+  scope :for_carrousel, -> { where(for_carrousel: true) }
 
   def first_image
     images.first.picture
