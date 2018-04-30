@@ -1,5 +1,4 @@
 .img-size {
-  width: 100%;
   height: 100%;
 }
 
@@ -8,22 +7,14 @@
 }
 
 .carousel-inner {
-  background-color: #7d07af;
+  background-color: #8d35b2;
   height: 400px;
 }
 
-.uno, .dos, .tres {
+.uno, .dos {
   color: #ffffff;
   padding: 15px;
   overflow: hidden;
-}
-
-.dos {
-  font-size: 25px;
-}
-
-.tres {
-  font-size: 15px;
 }
 
 #conteiner-carrousel {

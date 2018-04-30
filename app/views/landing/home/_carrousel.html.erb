@@ -3,30 +3,27 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
+        <% art_to_carousel = @carrousel_articles.first(3) %>
         <div class="item active">
-          <div class="col-lg-8 col-sm-8 art-img">
-            <%= image_tag @carrousel_articles.first.first_image, class: "img-size" %>
+          <div class="col-xs-12 col-sm-6 col-lg-8 img-size">
+            <%= image_tag art_to_carousel.first.first_image %>
           </div>
-          <div class="col-lg-4 col-sm-4 art-info">
-            <h5 class="uno"><%= @carrousel_articles.first.section.name %></h5>
-            <p class="dos"><%= link_to @carrousel_articles.first.headline, article_path(@carrousel_articles.first), class: 'link-color' %>
-            </p>
-            <div class="line">_______</div>
-            <p class="tres"><%= @carrousel_articles.first.lead %></p>
+          <div class="col-xs-6 col-lg-4">
+            <h5 class="uno"><%= art_to_carousel.first.section.name %></h5>
+            <h1 class="dos"><%= link_to art_to_carousel.first.headline, article_path(art_to_carousel.first), class: 'link-color' %>
+            </h1>
           </div>
         </div>
 
-        <% @carrousel_articles.except(@carrousel_articles.first).each do |a|%>
+        <% art_to_carousel.last(2).each do |a|%>
           <div class="item">
-            <div class="col-lg-8 col-sm-8 art-img">
-              <%= image_tag a.first_image, class: "img-size" %>
+            <div class="col-xs-12 col-sm-6 col-lg-8 img-size">
+              <%= image_tag a.first_image %>
             </div>
-            <div class="col-lg-4 col-sm-4 art-info">
+            <div class="col-xs-6 col-lg-4">
               <h5 class="uno"><%= a.section.name %></h5>
-              <p class="dos"><%= link_to a.headline, article_path(a), class: 'link-color' %>
-              </p>
-              <div class="line">_______</div>
-              <p class="tres"><%= a.lead %></p>
+              <h1 class="dos"><%= link_to a.headline, article_path(a), class: 'link-color' %>
+              </h1>
             </div>
           </div>
         <% end %>
