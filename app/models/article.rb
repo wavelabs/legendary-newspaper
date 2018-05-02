@@ -10,6 +10,7 @@ class Article < ApplicationRecord
   delegate :name, to: :section, prefix: true
 
   validates :headline, :lead, :body, :section_id, presence: true
+  validates :images, :length => { :minimum => 1 }
 
   default_scope { order("created_at DESC") }
   scope :approved, -> { where(published: true) }
