@@ -22,7 +22,7 @@
   <tbody>
     <% @banners.each do |b| %>
       <tr>
-        <td><%= b.position %></td>
+        <td><%= t(b.position) %></td>
         <td><%= b.link %></td>
         <td><%= image_tag(b.image.picture, class: "img-admin-show") %></td>
         <td><%= link_to 'Eliminar', admin_banner_path(b), method: :delete, data: { confirm: 'Está Seguro?' } %></td>
