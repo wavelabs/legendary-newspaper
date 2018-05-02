@@ -3,3 +3,6 @@ es:
   right_first: "Superior derecha"
   right_second: "Medio derecha"
   right_third: "Inferior derecha"
+  new_password: nueva_contraseña
+  password_confirmation: Confirmación de la contraseña
+  current_password: Contraseña actual
