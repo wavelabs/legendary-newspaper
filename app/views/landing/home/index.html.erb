@@ -7,7 +7,7 @@
     <%= render 'shared/landing/home/section', section_name: sec.name, articles: sec.recent_articles %>
   <% end %>
   <% if @most_viewed.any? %>
-    <%= render 'shared/landing/home/section', section_name: "Populares", articles: @most_viewed %>
+    <%= render 'shared/landing/home/section', section_name: "MÁS LEIDAS", articles: @most_viewed %>
   <% end %>
 </div>
 <%= render 'shared/landing/banner_rigth'%>
