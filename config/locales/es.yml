@@ -1,2 +1,5 @@
 es:
+  new_password: nueva_contraseña
+  password_confirmation: Confirmación de la contraseña
+  current_password: Contraseña actual
 

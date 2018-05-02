@@ -7,17 +7,17 @@
         <%= devise_error_messages! %>
         
         <div class="form-group">
-          <%= f.label :new_password %>
+          <%= f.label t(:new_password) %>
           <%= f.password_field :password, autocomplete: "off", placeholder: t('activerecord.attributes.password_singup', length: @minimum_password_length), class: "form-control js-check-for-changes" %>
         </div>
 
         <div class="form-group">
-          <%= f.label :password_confirmation %>
+          <%= f.label t(:password_confirmation) %>
           <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control js-check-for-changes' %>
         </div>
 
         <div class="form-group">
-          <%= f.label :current_password %>
+          <%= f.label t(:current_password) %>
           <%= f.password_field :current_password, autocomplete: "off", class: 'form-control js-check-for-changes' %>
         </div>
 
