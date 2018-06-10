@@ -5,3 +5,4 @@ default:
   plugins:
     - link
     - media
+    - code
