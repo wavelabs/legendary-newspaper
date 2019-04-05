@@ -31,12 +31,11 @@
       </div> 
       <%= social_share_button_tag(@decorated_article.headline,  :image => image_url(article_path(@decorated_article.first_image)), :'data-type' => 'photo') %>
 
-
       <a href="whatsapp://send?text=<%= request.original_url %>" id= "wsp"><i class="fa fa-whatsapp" id="whatsapp"></i></a>
 
-      <div id="fb-root"></div>
-
-      <div class="fb-share-button" data-href="https://latucu-staging.herokuapp.com/articles/7" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flatucu-staging.herokuapp.com%2Farticles%2F7&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+      <div class="fb-share-button" data-href="https://buenaondaweb.com/articles/<%= @decorated_article.id %>" data-layout="button" data-size="large" data-mobile-iframe="true">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbuenaondaweb.com%2Farticles%2F7&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a>
+      </div>
 
     </div>
   </div>
