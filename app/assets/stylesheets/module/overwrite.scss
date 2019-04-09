@@ -1,3 +1,15 @@
+.navbar-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: last baseline;
+}
+
+@media (max-width: 720px) {
+  .navbar-container {
+    display: block;
+  }
+}
+
 hr {
       border-top: 1px solid #ddd;
 }
@@ -112,6 +124,27 @@ h3.tittle, h2.tittle {
 
 .logo-header{
   width: 225px;
+  height: 65px;
+}
+
+@media (max-width: 720px) {
+  .logo-header{
+    height: 80px;
+  }
+}
+
+.logo-nav-bar {
+  width: 90%;
+}
+
+@media (max-width: 720px) {
+  .logo-nav-bar {
+    width: 80%;
+  }
+}
+
+.navbar-brand {
+  margin-top: -15px !important;
 }
 
 .top-banner {
@@ -264,5 +297,4 @@ p.article {
     .card {
     width: 80%;
   }
-
 }
