@@ -29,7 +29,7 @@
           <% end %>
         </div>
       </div> 
-      <%= social_share_button_tag(@decorated_article.headline,  :image => image_url(article_path(@decorated_article.first_image)), :'data-type' => 'photo') %>
+      <%= social_share_button_tag(desc: @decorated_article.headline,  :image => image_url(article_path(@decorated_article.first_image)), :'data-type' => 'photo') %>
 
       <a href="whatsapp://send?text=<%= request.original_url %>" id= "wsp"><i class="fa fa-whatsapp" id="whatsapp"></i></a>
     </div>
