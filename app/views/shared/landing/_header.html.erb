@@ -17,8 +17,31 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><%= link_to 'Tapa', root_path %></li>
-            <% Section.with_articles.each do |section| %>
-              <li><%= link_to section.name, articles_section_path(section) %></li>
+            <%if @sections.count < 7 %>
+              <% @sections.each do |section| %>
+                <li><%= link_to section.name, articles_section_path(section) %></li>
+              <% end %>
+            <% else %>
+              <% first_sections = @sections.first(6) %>
+              <% last_sections = @sections.reject { |section| first_sections.include?(section) } %>
+
+              <% first_sections.each do |section| %>
+                <li><%= link_to section.name, articles_section_path(section) %></li>
+              <% end %>
+
+              <li>
+                <div id="dropdown-navbar" class="btn-group" role="group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <b>Otras Secciones</b>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <% last_sections.each do |section| %>
+                      <li><%= link_to section.name, articles_section_path(section) %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </li>
             <% end %>
           </ul>
         </div>

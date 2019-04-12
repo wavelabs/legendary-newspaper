@@ -10,9 +10,9 @@ class Landing::HomeController < Landing::BaseController
     begin
       @section = Section.friendly.find(params[:id])
       @section_articles = @section.articles.approved.collect { |article| Landing::ArticlePresenter.new(article, view_context) }
-      
-    rescue 
-      render :file => "#{Rails.root}/public/404.html",  layout: true, status: :not_found   
-    end    
+
+    rescue
+      render :file => "#{Rails.root}/public/404.html",  layout: true, status: :not_found
+    end
   end
 end
