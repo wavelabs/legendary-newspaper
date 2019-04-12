@@ -333,3 +333,33 @@ $size: 28px;
 #dropdown-navbar {
   margin-top: 8%;
 }
+
+@media (min-width: 576px) and (max-width: 960px) {
+  #dropdown-navbar {
+    margin-top: 2%;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 960px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-medium-devise {
+    display: block !important;
+  }
+
+  .navbar-mobile {
+    display: none;
+  }
+}
